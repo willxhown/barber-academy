@@ -3,29 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilsons Midnight Barbers Academy - Master Training Manual</title>
+<title>Wilsons Midnight Barbers Academy - Trainee Training Manual</title>
 <style>
   :root {
     --bg-dark: #0f1117;
     --bg-card: #181b24;
     --border-color: #2a2f3f;
     --accent-gold: #d4af37;
-    --accent-gold-hover: #b8972e;
     --text-main: #f8fafc;
     --text-muted: #9ca3af;
     --success: #10b981;
     --danger: #ef4444;
-    --info: #3b82f6;
   }
 
   @page {
     size: A4 portrait;
-    margin: 12mm 14mm;
-    @bottom-center {
-      content: "Wilsons Midnight Barbers Academy • Student Manual • Page " counter(page);
-      font-size: 8pt;
-      color: #64748b;
-    }
+    margin: 12mm;
   }
 
   *, *::before, *::after {
@@ -38,25 +31,25 @@
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 9.5pt;
-    line-height: 1.55;
-    padding: 24px 16px;
+    font-size: 10pt;
+    line-height: 1.6;
+    padding: 20px 14px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
   .manual-wrapper {
-    max-width: 1060px;
+    max-width: 1040px;
     margin: 0 auto;
   }
 
-  /* Header Banner */
+  /* Header */
   .hero-banner {
     background: #12151d;
     border: 2px solid var(--accent-gold);
     border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,25 +64,22 @@
     padding: 3px 8px;
     border-radius: 3px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .hero-title {
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: 800;
     color: #fff;
-    line-height: 1.2;
     text-transform: uppercase;
   }
 
   .hero-sub {
-    font-size: 9.5pt;
+    font-size: 9pt;
     color: var(--text-muted);
-    margin-top: 4px;
   }
 
-  /* Interactive Tab Bar */
+  /* Tab Navigation */
   .tab-nav {
     display: flex;
     gap: 6px;
@@ -98,8 +88,7 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 8px;
-    margin-bottom: 24px;
-    scrollbar-width: thin;
+    margin-bottom: 20px;
   }
 
   .tab-btn {
@@ -112,7 +101,7 @@
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
-    transition: all 0.2s ease;
+    transition: 0.2s;
   }
 
   .tab-btn:hover {
@@ -126,7 +115,7 @@
     border-color: var(--accent-gold);
   }
 
-  /* Tab Lesson Panes */
+  /* Lesson Panes */
   .lesson-pane {
     display: none;
     animation: fadeIn 0.25s ease-in-out;
@@ -137,7 +126,7 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(6px); }
+    from { opacity: 0; transform: translateY(4px); }
     to { opacity: 1; transform: translateY(0); }
   }
 
@@ -145,21 +134,21 @@
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 24px;
-    margin-bottom: 24px;
+    padding: 22px;
+    margin-bottom: 20px;
   }
 
   .chapter-header {
     border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
   }
 
   .chapter-header h2 {
-    font-size: 13.5pt;
+    font-size: 13pt;
     color: var(--accent-gold);
     text-transform: uppercase;
     font-weight: 800;
@@ -169,76 +158,73 @@
     font-size: 8pt;
     color: var(--text-muted);
     font-weight: 700;
-    text-transform: uppercase;
   }
 
   h3 {
-    font-size: 10.5pt;
+    font-size: 11pt;
     color: #fff;
     margin: 14px 0 6px;
-    font-weight: 700;
   }
 
   p {
-    font-size: 9pt;
+    font-size: 9.5pt;
     color: #cbd5e1;
     margin-bottom: 12px;
   }
 
-  ul, ol {
+  ol, ul {
     padding-left: 20px;
     margin-bottom: 14px;
   }
 
   li {
-    font-size: 8.8pt;
+    font-size: 9pt;
     color: #cbd5e1;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
-  strong {
-    color: #fff;
-  }
-
-  /* Image Showcase Layouts */
-  .img-showcase {
+  /* Equipment & Supplies Visual Grid */
+  .tool-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 14px;
-    margin: 14px 0;
+    margin: 16px 0;
   }
 
-  .img-card {
+  .tool-card {
     background: #11141c;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     overflow: hidden;
   }
 
-  .img-card img {
+  .tool-card img {
     width: 100%;
-    height: 190px;
+    height: 140px;
     object-fit: cover;
     display: block;
-    background-color: #202735;
+    background: #1e2433;
   }
 
-  .img-caption {
+  .tool-info {
     padding: 10px 12px;
   }
 
-  .img-caption strong {
+  .tool-info strong {
     display: block;
-    color: #fff;
-    font-size: 8.5pt;
+    color: var(--accent-gold);
+    font-size: 9pt;
+    margin-bottom: 2px;
   }
 
-  .img-caption span {
-    font-size: 7.5pt;
-    color: var(--text-muted);
+  .tool-info p {
+    font-size: 8pt;
+    color: #94a3b8;
+    margin-bottom: 0;
+    line-height: 1.35;
   }
 
-  /* Lookbook Grid */
+  /* Haircut Catalog Grid (Head-Focused AI Images) */
   .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -257,10 +243,10 @@
 
   .haircut-img-wrap {
     width: 100%;
-    height: 240px;
+    height: 250px;
     overflow: hidden;
     position: relative;
-    background: #181d28;
+    background: #161a24;
   }
 
   .haircut-img-wrap img {
@@ -272,20 +258,20 @@
 
   .haircut-tag {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(15, 17, 23, 0.88);
+    top: 8px;
+    left: 8px;
+    background: rgba(15, 17, 23, 0.9);
     border: 1px solid var(--accent-gold);
     color: var(--accent-gold);
     font-size: 7pt;
     font-weight: 800;
     text-transform: uppercase;
-    padding: 2px 7px;
+    padding: 2px 6px;
     border-radius: 3px;
   }
 
   .haircut-content {
-    padding: 14px 16px;
+    padding: 14px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -295,26 +281,51 @@
     font-size: 11pt;
     color: #fff;
     margin-bottom: 4px;
-    font-weight: 700;
   }
 
   .haircut-desc {
-    font-size: 8pt;
+    font-size: 8.5pt;
     color: #94a3b8;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     line-height: 1.4;
-    min-height: 34px;
+  }
+
+  .step-box {
+    background: #151924;
+    border-left: 3px solid var(--accent-gold);
+    padding: 8px 10px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 10px;
+  }
+
+  .step-box strong {
+    display: block;
+    color: #fff;
+    font-size: 8pt;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .step-box ol {
+    padding-left: 16px;
+    margin-bottom: 0;
+  }
+
+  .step-box li {
+    font-size: 8pt;
+    color: #cbd5e1;
+    margin-bottom: 3px;
   }
 
   .spec-table {
     width: 100%;
-    font-size: 7.8pt;
+    font-size: 7.5pt;
     border-collapse: collapse;
     margin-top: auto;
   }
 
   .spec-table td {
-    padding: 5px 0;
+    padding: 4px 0;
     border-bottom: 1px solid #1f2533;
     color: #cbd5e1;
   }
@@ -322,16 +333,15 @@
   .spec-table td:first-child {
     color: var(--text-muted);
     font-weight: 600;
-    width: 40%;
   }
 
   .spec-table td:last-child {
     font-weight: 700;
-    color: #f1f5f9;
+    color: #fff;
     text-align: right;
   }
 
-  /* Data Tables */
+  /* Tables */
   table.data-table {
     width: 100%;
     border-collapse: collapse;
@@ -353,7 +363,6 @@
     padding: 8px 10px;
     border-bottom: 1px solid #202634;
     color: #cbd5e1;
-    vertical-align: top;
   }
 
   .callout-box {
@@ -364,89 +373,47 @@
     border-radius: 0 6px 6px 0;
   }
 
-  .callout-title {
-    font-size: 8.5pt;
-    font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-
-  .svg-container {
-    background: #10131a;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 14px;
-    margin: 14px 0;
-    text-align: center;
-  }
-
-  .anatomy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 14px;
-    margin: 14px 0;
-  }
-
-  .anatomy-card {
-    background: #10131a;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 12px;
-    text-align: center;
-  }
-
-  /* Bottom Navigation (Next / Back Buttons) */
+  /* Bottom Next/Back */
   .lesson-nav-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid var(--border-color);
-    padding-top: 18px;
-    margin-top: 24px;
+    padding-top: 16px;
+    margin-top: 20px;
   }
 
   .nav-btn {
     background: #141822;
     border: 1px solid var(--border-color);
     color: var(--text-main);
-    padding: 10px 18px;
+    padding: 9px 16px;
     border-radius: 6px;
     font-size: 8.5pt;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    transition: 0.2s;
   }
 
   .nav-btn:hover:not(:disabled) {
     background: var(--accent-gold);
     color: #000;
-    border-color: var(--accent-gold);
   }
 
   .nav-btn:disabled {
-    opacity: 0.35;
+    opacity: 0.3;
     cursor: not-allowed;
-  }
-
-  .page-break {
-    page-break-before: always;
-    break-before: page;
   }
 
   @media print {
     body { background: #fff; color: #000; padding: 0; }
     .lesson-pane { display: block !important; page-break-after: always; }
     .tab-nav, .lesson-nav-footer, .no-print { display: none !important; }
-    .chapter-card, .haircut-card { background: #fff; color: #000; border: 1px solid #ccc; box-shadow: none; page-break-inside: avoid; }
+    .chapter-card, .haircut-card, .tool-card { background: #fff; color: #000; border: 1px solid #ccc; }
     .hero-banner { background: #fff; border: 2px solid #000; color: #000; }
     .hero-title, h3, h4, .chapter-header h2 { color: #000 !important; }
-    p, li, td, .haircut-desc { color: #222 !important; }
-    table.data-table th { background: #f0f0f0; color: #000; }
-    .haircut-tag { border: 1px solid #000; color: #000; background: #fff; }
+    p, li, td { color: #222 !important; }
+    table.data-table th { background: #eee; color: #000; }
   }
 </style>
 </head>
@@ -454,360 +421,373 @@
 
 <div class="manual-wrapper">
 
-  <!-- HERO BANNER -->
+  <!-- TOP HEADER -->
   <div class="hero-banner">
     <div>
-      <span class="hero-tag">Official Master Curriculum</span>
-      <h1 class="hero-title">Barbering Handbook & Technical Compendium</h1>
-      <div class="hero-sub">Wilsons Midnight Barbers Academy • Comprehensive Theory, Mechanics, Anatomy & Practice</div>
+      <span class="hero-tag">Beginner Friendly Manual</span>
+      <h1 class="hero-title">Wilsons Barber Academy</h1>
+      <div class="hero-sub">Step-by-Step Training Manual: Tools, Techniques, Fades & Haircuts</div>
     </div>
-    <div style="text-align:right;" class="no-print">
-      <button onclick="window.print()" style="background:var(--accent-gold); color:#000; border:none; padding:10px 16px; border-radius:6px; font-weight:bold; cursor:pointer; font-size:8.5pt;">
-        Save as PDF / Print
+    <div class="no-print">
+      <button onclick="window.print()" style="background:var(--accent-gold); color:#000; border:none; padding:8px 14px; border-radius:6px; font-weight:bold; cursor:pointer; font-size:8.5pt;">
+        Print Manual / PDF
       </button>
     </div>
   </div>
 
   <!-- INTERACTIVE CHAPTER TABS -->
   <div class="tab-nav no-print" id="tabNav">
-    <button class="tab-btn active" onclick="switchLesson(1)">1. Principles & Scissors</button>
-    <button class="tab-btn" onclick="switchLesson(2)">2. Materials & Legend</button>
-    <button class="tab-btn" onclick="switchLesson(3)">3. 4-View Anatomy</button>
-    <button class="tab-btn" onclick="switchLesson(4)">4. Draping & Wash</button>
-    <button class="tab-btn" onclick="switchLesson(5)">5. Face Shapes</button>
-    <button class="tab-btn" onclick="switchLesson(6)">6. Taper Masterclass</button>
-    <button class="tab-btn" onclick="switchLesson(7)">7. Haircut Lookbook</button>
-    <button class="tab-btn" onclick="switchLesson(8)">8. Maintenance</button>
-    <button class="tab-btn" onclick="switchLesson(9)">9. Business Launch</button>
-    <button class="tab-btn" onclick="switchLesson(10)">10. Practical Rubric</button>
+    <button class="tab-btn active" onclick="switchLesson(1)">1. Barber Supplies & Tools</button>
+    <button class="tab-btn" onclick="switchLesson(2)">2. Cleanliness & Safety</button>
+    <button class="tab-btn" onclick="switchLesson(3)">3. Parts of the Head</button>
+    <button class="tab-btn" onclick="switchLesson(4)">4. Washing & Blow-Drying</button>
+    <button class="tab-btn" onclick="switchLesson(5)">5. Face Shapes Guide</button>
+    <button class="tab-btn" onclick="switchLesson(6)">6. How to do a Taper</button>
+    <button class="tab-btn" onclick="switchLesson(7)">7. Haircut Lookbook & Steps</button>
+    <button class="tab-btn" onclick="switchLesson(8)">8. Tool Care & Setup</button>
   </div>
 
-  <!-- ================= LESSON 1 ================= -->
+  <!-- ================= LESSON 1: BARBER SUPPLIES ================= -->
   <div class="lesson-pane active" id="lesson-1">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 1: Foundations, Principles & Scissor Hair Shaping</h2>
-        <span>Lesson 1 of 10</span>
+        <h2>Lesson 1: Barber Tools and Supplies</h2>
+        <span>Lesson 1 of 8</span>
       </div>
-      <p>Haircutting is structural architecture applied to an organic, curved surface. Mastery requires strict control of angles, tension, and shear biomechanics.</p>
+      <p>Before cutting hair, you must know what each tool does. Below are the basic tools you will use every day in the shop.</p>
 
-      <h3>1. The Four Fundamental Haircutting Forms</h3>
+      <div class="tool-grid">
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Clipper">
+          <div class="tool-info">
+            <strong>1. Hair Clippers & Guards</strong>
+            <p>Used to cut large amounts of hair fast and blend fade lines using guard numbers (#0.5 to #4).</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Trimmer">
+          <div class="tool-info">
+            <strong>2. Outlining Trimmer</strong>
+            <p>Used to make sharp straight lines on the temples, sideburns, and back of the neck.</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Foil Shaver">
+          <div class="tool-info">
+            <strong>3. Foil Shaver</strong>
+            <p>Cleans the neck down to smooth skin (0.0mm) without cutting or scratching the client.</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Shears">
+          <div class="tool-info">
+            <strong>4. Cutting Shears (Scissors)</strong>
+            <p>Used to trim and cut hair on the top of the head and blend with the comb.</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=600&q=80" alt="Shavette">
+          <div class="tool-info">
+            <strong>5. Straight Razor (Shavette)</strong>
+            <p>Uses a clean, disposable razor blade to clean necklines and beard lines with shaving gel.</p>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Combs">
+          <div class="tool-info">
+            <strong>6. Barber Combs & Clips</strong>
+            <p>Wide comb for detangling, taper comb for fading, and clips to hold top hair out of the way.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Simple Clipper Guard Chart</h3>
       <table class="data-table">
         <thead>
-          <tr><th>Form Structure</th><th>Elevation Angle</th><th>Weight Distribution</th><th>Visual Result</th></tr>
+          <tr><th>Guard Size</th><th>Hair Length</th><th>How Trainees Use It</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Solid Form (Blunt Cut)</strong></td><td>0° (Natural Fall)</td><td>Maximum weight at the perimeter line.</td><td>Solid horizontal/diagonal edge; zero graduation.</td></tr>
-          <tr><td><strong>Graduated Form (Wedge)</strong></td><td>1° to 89° (Commonly 45°)</td><td>Weight builds up along an interior ridge.</td><td>Stacked, bevelled volume with visible contour.</td></tr>
-          <tr><td><strong>Uniformly Layered Form</strong></td><td>90° Straight from scalp</td><td>Equal length throughout the head silhouette.</td><td>Rounded contour; weight is dispersed evenly.</td></tr>
-          <tr><td><strong>Progressive (Square) Layers</strong></td><td>90° to 180° Elevated</td><td>Shorter interior crown, longer perimeters.</td><td>Masculine, flat top planes; removes bulky crowns.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>2. Parting & Elevation Principles</h3>
-      <ul>
-        <li><strong>Horizontal Partings:</strong> Build weight and stability; used for baselines and perimeter blunts.</li>
-        <li><strong>Vertical Partings:</strong> Remove weight and create flat, vertical planes; used for layering and graduation.</li>
-        <li><strong>Diagonal Forward / Back:</strong> Directs hair movement either toward or away from the face.</li>
-        <li><strong>Tension Dynamics:</strong> Wet hair stretches up to 40–50%. Use minimum-to-zero tension over cowlicks, ears, and receding hairlines to prevent cut-backs.</li>
-      </ul>
-
-      <h3>3. Advanced Scissor Hair Shaping Techniques</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>Cutting Technique</th><th>Mechanical Hand Execution</th><th>Strategic Objective</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Palm-to-Palm</strong></td><td>Shear blades parallel to the holding fingers with palms facing each other.</td><td>Prevents over-extension, maintains uniform tension on vertical lines.</td></tr>
-          <tr><td><strong>Point Cutting</strong></td><td>Tips of shears snip diagonally (30°–45°) into the hair ends.</td><td>Softens blunt lines, creates separation, blends layered transitions.</td></tr>
-          <tr><td><strong>Slide Cutting</strong></td><td>Shear blades held slightly open, gliding downward along hair shafts.</td><td>Removes bulk without reducing overall length; enhances movement.</td></tr>
-          <tr><td><strong>Scissor-Over-Comb</strong></td><td>Still shear blade rides along the comb spine moving continuously up.</td><td>Seamlessly blends the parietal ridge where clippers cannot reach.</td></tr>
+          <tr><td><strong>No Guard (Lever Closed)</strong></td><td>0.5 mm (Very Short)</td><td>Start of the fade line.</td></tr>
+          <tr><td><strong>#0.5 Guard</strong></td><td>1.5 mm</td><td>Erasing the bottom dark line.</td></tr>
+          <tr><td><strong>#1 Guard</strong></td><td>3.0 mm</td><td>Building the middle of the fade.</td></tr>
+          <tr><td><strong>#1.5 Guard</strong></td><td>4.5 mm</td><td>Connecting the fade to the top hair.</td></tr>
+          <tr><td><strong>#2 Guard</strong></td><td>6.0 mm</td><td>Removing bulky, thick hair.</td></tr>
         </tbody>
       </table>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" disabled>← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 1 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(2)">Next Lesson: Materials & Legend →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 1 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(2)">Next: Cleanliness & Safety →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 2 ================= -->
+  <!-- ================= LESSON 2: CLEANLINESS ================= -->
   <div class="lesson-pane" id="lesson-2">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 2: Materials, Implements & Masterfile Inventory Legend</h2>
-        <span>Lesson 2 of 10</span>
+        <h2>Lesson 2: Cleanliness, Hygiene & Safety</h2>
+        <span>Lesson 2 of 8</span>
       </div>
-      <p>Every tool in the barbershop falls into either <strong>Retail</strong> (sold to clients) or <strong>Backbar</strong> (internal shop supplies) matching your Product Masterfile schema[cite: 2].</p>
+      <p>Clean tools prevent scalp infections, dandruff, and pimples from spreading from one client to another.</p>
 
-      <table class="data-table">
-        <thead>
-          <tr><th>Implement / Material</th><th>Tool Category</th><th>Masterfile Classification</th><th>Primary Role & Hygiene Protocol</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Convex Shear (6.0"–6.5")</strong></td><td>Cutting Implement</td><td>Backbar (Durable Asset)</td><td>Primary scissor cutting and blunt lines. Disinfect with alcohol between clients.</td></tr>
-          <tr><td><strong>Thinning Shear (28–40T)</strong></td><td>Texturizing Implement</td><td>Backbar (Durable Asset)</td><td>Removes 20–30% bulk without shortening length. Balance screw regularly.</td></tr>
-          <tr><td><strong>Straight Razor (Shavette)</strong></td><td>Shaving Implement</td><td>Backbar (Durable Asset)</td><td>Lineups and shaves. Single-use split blades discarded in Sharps container.</td></tr>
-          <tr><td><strong>Taper & Carbon Combs</strong></td><td>Parting & Shaping</td><td>Backbar (Durable Asset)</td><td>Heat-resistant combs for clipper-over-comb. Submerge 10 min in Barbicide.</td></tr>
-          <tr><td><strong>Elastic Paper Neck Strip</strong></td><td>Sanitary Barrier</td><td>Backbar (Consumable)[cite: 2]</td><td>Single-use barrier preventing vinyl cape contact with client skin.</td></tr>
-          <tr><td><strong>Barber Cutting Cape</strong></td><td>Client Protection</td><td>Backbar (Linen Asset)</td><td>Water-repellent barrier. Wash daily; sanitize with disinfectant spray.</td></tr>
-          <tr><td><strong>Terry Cloth Towel</strong></td><td>Client Comfort</td><td>Backbar (Linen Asset)</td><td>Steam towels for hot shaves and basin drying. Launder at 60°C minimum.</td></tr>
-          <tr><td><strong>Sectioning Hair Grips</strong></td><td>Hair Control</td><td>Backbar (Durable Asset)</td><td>Holds top length clear of the horseshoe parting during side fading.</td></tr>
-          <tr><td><strong>Ionic Hair Dryer & Nozzle</strong></td><td>Styling Hardware</td><td>Backbar (Durable Asset)</td><td>Directs airflow root-to-tip. Clean lint filter every week.</td></tr>
-          <tr><td><strong>Vent & Round Brushes</strong></td><td>Volume Hardware</td><td>Backbar (Durable Asset)</td><td>Creates root lift and direction. Remove hair and submerge in Barbicide.</td></tr>
-          <tr><td><strong>Midnight Matte Clay</strong></td><td>Finishing Styling</td><td>Retail & Backbar[cite: 2]</td><td>Low-shine textured hold. Track reorder alerts when inventory dips below 5 units[cite: 2].</td></tr>
-          <tr><td><strong>Conditioning Beard Oil</strong></td><td>Facial Grooming</td><td>Retail & Backbar[cite: 2]</td><td>Cedarwood beard hydration. Track sales to calculate barber commissions[cite: 1, 2].</td></tr>
-        </tbody>
-      </table>
+      <h3>3 Rules for Every Haircut:</h3>
+      <ol>
+        <li><strong>Always Use a Neck Strip:</strong> Never let the black vinyl cape touch the client's bare skin. Wrap a clean white paper neck strip around their neck first.</li>
+        <li><strong>Barbicide Soak (10 Minutes):</strong> Wash combs and scissors with soap and water to remove loose hair, then soak them in blue Barbicide liquid for 10 minutes between clients.</li>
+        <li><strong>New Blade for Every Person:</strong> Throw away the used razor blade into a plastic red biohazard box immediately after the haircut. Never reuse a blade on two different people.</li>
+      </ol>
+
+      <div class="callout-box" style="border-left-color: var(--danger);">
+        <strong style="color: var(--danger); font-size: 8.5pt; text-transform: uppercase;">Stop! Do Not Cut If You See:</strong>
+        <p style="margin:4px 0 0; font-size:8.5pt;">If a client has open sores, bleeding pimples, or circular red itchy patches (ringworm), politely tell them they need to visit a doctor first before getting a haircut.</p>
+      </div>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(1)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 2 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(3)">Next Lesson: 4-View Anatomy →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 2 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(3)">Next: Parts of the Head →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 3 ================= -->
+  <!-- ================= LESSON 3: HEAD ANATOMY ================= -->
   <div class="lesson-pane" id="lesson-3">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 3: Head Anatomy & Cranial Geography (4 Orthogonal Views)</h2>
-        <span>Lesson 3 of 10</span>
+        <h2>Lesson 3: The 4 Main Parts of the Head</h2>
+        <span>Lesson 3 of 8</span>
       </div>
-      <p>A precision haircut respects the client's cranial topography. Below are the 4 fundamental orthogonal reference views.</p>
+      <p>To talk with your trainer and follow haircut steps, you must know where these 4 main areas are on every client's head.</p>
 
-      <div class="anatomy-grid">
-        <div class="anatomy-card">
-          <h4 style="color:var(--accent-gold); margin-bottom:8px;">1. Side View (Profile)</h4>
-          <svg viewBox="0 0 260 260" width="100%" height="180">
-            <path d="M 60 210 C 60 170, 50 140, 50 110 C 50 50, 100 20, 160 20 C 220 20, 240 70, 240 120 C 240 160, 220 180, 200 190 C 190 200, 180 210, 180 210" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-            <path d="M 135 125 C 120 125, 115 145, 128 160 C 138 170, 150 150, 145 135 Z" fill="#181b24" stroke="#9ca3af" stroke-width="1.5"/>
-            <circle cx="160" cy="20" r="4" fill="#3b82f6"/><text x="170" y="24" fill="#60a5fa" font-size="8">Apex (Highest Point)</text>
-            <circle cx="110" cy="70" r="4" fill="#ef4444"/><text x="15" y="74" fill="#f87171" font-size="8">Parietal Ridge</text>
-            <circle cx="55" cy="135" r="4" fill="#10b981"/><text x="5" y="139" fill="#34d399" font-size="8">Occipital Bone</text>
-            <line x1="60" y1="200" x2="110" y2="200" stroke="#a855f7" stroke-width="2"/><text x="115" y="203" fill="#c084fc" font-size="8">Nape Perimeter</text>
-          </svg>
-        </div>
+      <div class="callout-box">
+        <ul>
+          <li><strong>1. Top (Crown & Fringe):</strong> The hair on top of the head that you cut with scissors and comb forward, up, or back.</li>
+          <li><strong>2. Parietal Ridge (The Curve):</strong> The widest curved bone along the sides of the head. This connects the top hair to your side fade.</li>
+          <li><strong>3. Occipital Bone (The Bump):</strong> The round bump you feel at the back of the skull. Low fades stay under this bump; mid fades go right across it.</li>
+          <li><strong>4. Nape:</strong> The bottom edge of the hairline right above the neck.</li>
+        </ul>
+      </div>
 
-        <div class="anatomy-card">
-          <h4 style="color:var(--accent-gold); margin-bottom:8px;">2. Front View (Facial Axis)</h4>
-          <svg viewBox="0 0 260 260" width="100%" height="180">
-            <path d="M 70 210 C 65 160, 60 90, 80 50 C 100 20, 160 20, 180 50 C 200 90, 195 160, 190 210 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-            <line x1="60" y1="130" x2="70" y2="130" stroke="#9ca3af" stroke-width="2"/>
-            <line x1="190" y1="130" x2="200" y2="130" stroke="#9ca3af" stroke-width="2"/>
-            <line x1="130" y1="20" x2="130" y2="220" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
-            <circle cx="85" cy="70" r="3" fill="#ef4444"/><text x="10" y="65" fill="#f87171" font-size="8">Frontal Recession</text>
-            <circle cx="175" cy="70" r="3" fill="#ef4444"/><text x="180" y="65" fill="#f87171" font-size="8">Temple Peak</text>
-            <line x1="75" y1="110" x2="185" y2="110" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2"/><text x="95" y="105" fill="#34d399" font-size="8">Eye / Cheek Plane</text>
-          </svg>
-        </div>
-
-        <div class="anatomy-card">
-          <h4 style="color:var(--accent-gold); margin-bottom:8px;">3. Top View (Crown & Parting)</h4>
-          <svg viewBox="0 0 260 260" width="100%" height="180">
-            <ellipse cx="130" cy="130" rx="75" ry="95" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-            <path d="M 90 70 Q 130 50 170 70 Q 190 130 170 180 Q 130 200 90 180 Q 70 130 90 70 Z" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4"/>
-            <text x="75" y="45" fill="#fbbf24" font-size="8">Horseshoe Perimeter Line</text>
-            <circle cx="130" cy="165" r="4" fill="#ef4444"/><text x="105" y="160" fill="#f87171" font-size="8">Crown Swirl</text>
-            <circle cx="130" cy="110" r="4" fill="#3b82f6"/><text x="110" y="105" fill="#60a5fa" font-size="8">Apex Point</text>
-          </svg>
-        </div>
-
-        <div class="anatomy-card">
-          <h4 style="color:var(--accent-gold); margin-bottom:8px;">4. Back View (Occipital & Nape)</h4>
-          <svg viewBox="0 0 260 260" width="100%" height="180">
-            <path d="M 75 220 L 75 190 C 60 160, 60 110, 80 50 C 100 20, 160 20, 180 50 C 200 110, 200 160, 185 190 L 185 220" fill="none" stroke="#d4af37" stroke-width="2.5"/>
-            <circle cx="130" cy="120" r="4" fill="#10b981"/><text x="80" y="115" fill="#34d399" font-size="8">Occipital Bone Level</text>
-            <line x1="75" y1="180" x2="185" y2="180" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3"/><text x="95" y="175" fill="#fbbf24" font-size="8">Sub-Occipital Flat Zone</text>
-            <line x1="75" y1="215" x2="185" y2="215" stroke="#a855f7" stroke-width="2"/><text x="105" y="210" fill="#c084fc" font-size="8">Nape Hairline</text>
-          </svg>
-        </div>
+      <h3>Simple Head Diagram</h3>
+      <div class="svg-container">
+        <svg viewBox="0 0 600 240" width="100%" height="auto">
+          <path d="M 180 220 C 180 180, 160 140, 160 100 C 160 30, 240 20, 340 20 C 440 20, 480 60, 480 130 C 480 170, 460 190, 440 200 C 420 210, 420 220, 420 220" fill="none" stroke="#d4af37" stroke-width="3"/>
+          <circle cx="340" cy="20" r="4" fill="#3b82f6"/><text x="350" y="24" fill="#60a5fa" font-size="11" font-weight="bold">TOP / CROWN</text>
+          <circle cx="260" cy="65" r="4" fill="#ef4444"/><text x="150" y="70" fill="#f87171" font-size="11" font-weight="bold">PARIETAL RIDGE (Sides)</text>
+          <circle cx="165" cy="130" r="4" fill="#10b981"/><text x="60" y="135" fill="#34d399" font-size="11" font-weight="bold">OCCIPITAL BONE (Back Bump)</text>
+          <line x1="170" y1="200" x2="230" y2="200" stroke="#a855f7" stroke-width="2.5"/><text x="240" y="204" fill="#c084fc" font-size="11" font-weight="bold">NAPE (Neckline)</text>
+        </svg>
       </div>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(2)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 3 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(4)">Next Lesson: Draping & Wash →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 3 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(4)">Next: Washing & Drying →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 4 ================= -->
+  <!-- ================= LESSON 4: WASH & DRY ================= -->
   <div class="lesson-pane" id="lesson-4">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 4: Proper Draping, Shampooing & Ergonomic Blow Drying</h2>
-        <span>Lesson 4 of 10</span>
+        <h2>Lesson 4: How to Shampoo and Blow-Dry</h2>
+        <span>Lesson 4 of 8</span>
       </div>
-      <div class="img-showcase">
-        <div class="img-card">
-          <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Wash & Prep">
-          <div class="img-caption">
-            <strong>Lathering & Shampoo Basin Discipline</strong>
-            <span>Precise finger pad massage and controlled water temperature verification.</span>
-          </div>
-        </div>
-        <div class="img-card">
-          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Blow Drying">
-          <div class="img-caption">
-            <strong>Directional Airflow & Tension Styling</strong>
-            <span>Vent brush root lift paired with nozzle-focused warm air styling.</span>
-          </div>
-        </div>
-      </div>
-
+      
+      <h3>Step-by-Step Hair Wash:</h3>
       <ol>
-        <li><strong>Double-Towel Draping:</strong> Place the first towel around the neck, apply the cape over the towel (ensuring no cape plastic touches skin), and fold a second clean towel over the cape collar. For dry cuts, use an elastic paper neck strip pulled taut and folded outward.</li>
-        <li><strong>Shampoo Basin Mechanics:</strong> Test water on your inner wrist before touching the scalp. Use the finger pads (never fingernails) in circular motions, working from temples back to the occipital bone.</li>
-        <li><strong>Ergonomic Blow-Drying:</strong> Always point the airflow nozzle downward along the cuticle (from root to tip). Lift roots at 90° using a vent brush, apply warm heat to set structure, and lock in shape with a 5-second cold shot.</li>
+        <li><strong>Check Water Heat:</strong> Always test the warm water on your own wrist first so you do not burn the client's scalp.</li>
+        <li><strong>Use Finger Pads:</strong> Rub shampoo using the soft pads of your fingers in circles. <em>Never scratch with sharp fingernails.</em></li>
+        <li><strong>Rinse Clean:</strong> Cup your hand over their forehead so warm water does not drip into the client's eyes.</li>
+      </ol>
+
+      <h3>3 Rules for Blow-Drying:</h3>
+      <ol>
+        <li><strong>Blow Downward:</strong> Always point the blower tip downward from roots to ends to stop frizz and make hair shiny.</li>
+        <li><strong>Use the Brush to Lift:</strong> Pull the hair up with a comb or skeleton brush to give the hair height and volume.</li>
+        <li><strong>Use the Cold Button:</strong> Blast the styled hair with cold air for 5 seconds to lock the shape in place.</li>
       </ol>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(3)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 4 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(5)">Next Lesson: Face Shapes →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 4 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(5)">Next: Face Shapes Guide →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 5 ================= -->
+  <!-- ================= LESSON 5: FACE SHAPES ================= -->
   <div class="lesson-pane" id="lesson-5">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 5: Face Shape Analysis & Hairstyle Compatibility</h2>
-        <span>Lesson 5 of 10</span>
+        <h2>Lesson 5: Choosing the Right Cut for Every Face Shape</h2>
+        <span>Lesson 5 of 8</span>
       </div>
-      <p>A master barber sculpts a silhouette suited to the client's bone structure, aiming to bring any head shape closer to the ideal: the <strong>Square / Oval silhouette</strong>.</p>
+      <p>Different clients have different face shapes. A good barber gives a haircut that makes the face look balanced.</p>
 
       <table class="data-table">
         <thead>
-          <tr><th>Face Shape</th><th>Anatomical Identifiers</th><th>Best Hairstyle Match</th><th>Styles to Avoid</th></tr>
+          <tr><th>Face Shape</th><th>What It Looks Like</th><th>Best Haircuts to Choose</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Oval</strong></td><td>Forehead slightly wider than rounded jawline; symmetrical profile.</td><td>Mid Skin Fade, Pompadour, Slick Back, Low Taper.</td><td>Heavy forward bangs that obscure the forehead.</td></tr>
-          <tr><td><strong>Square</strong></td><td>Strong, wide jaw with sharp angle; equal cheekbone width.</td><td>Classic Side Part, Buzz Cut, French Crop, High Taper.</td><td>Blunt, boxy fringes that over-accentuate jaw width.</td></tr>
-          <tr><td><strong>Round</strong></td><td>Cheekbones and face length are equal; soft, curved jaw.</td><td>High Skin Fade, Textured Pompadour, Spiky Crop with height.</td><td>Low tapers with wide side bulk; bowl cuts.</td></tr>
-          <tr><td><strong>Diamond</strong></td><td>Wide, sharp cheekbones with narrow forehead and pointed chin.</td><td>Textured French Crop, Flow Mullet, Scissor Side Part.</td><td>High bald fades that make temples look overly narrow.</td></tr>
-          <tr><td><strong>Oblong / Long</strong></td><td>Face length is noticeably greater than width; straight cheek line.</td><td>Low Taper Fade, Layered Scissor Cut, Side Part with volume.</td><td>Extreme vertical pompadours that lengthen the head.</td></tr>
-          <tr><td><strong>Heart</strong></td><td>Wide forehead and temple plane tapering to a narrow pointed chin.</td><td>Mid Taper, Textured Crop, Side Swept Fringe, Natural Beard.</td><td>Severe high buzz cuts that emphasize top-heavy balance.</td></tr>
+          <tr><td><strong>Oval</strong></td><td>Balanced, smooth jawline.</td><td>Almost any haircut (Skin Fade, Pompadour, Taper).</td></tr>
+          <tr><td><strong>Square</strong></td><td>Wide, strong jaw and forehead.</td><td>Buzz Cut, Side Part, French Crop.</td></tr>
+          <tr><td><strong>Round</strong></td><td>Cheeks and face length are the same.</td><td>High Skin Fade, Spiky Hair, Pompadour (adds height).</td></tr>
+          <tr><td><strong>Long (Oblong)</strong></td><td>Face is tall and narrow.</td><td>Low Taper, Scissor Cut (keep some hair on the sides).</td></tr>
+          <tr><td><strong>Diamond</strong></td><td>Pointy chin and wide cheekbones.</td><td>Textured Crop, Mullet, Side Part.</td></tr>
         </tbody>
       </table>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(4)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 5 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(6)">Next Lesson: Taper Masterclass →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 5 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(6)">Next: How to do a Taper →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 6 ================= -->
+  <!-- ================= LESSON 6: TAPER GUIDE ================= -->
   <div class="lesson-pane" id="lesson-6">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 6: Step-by-Step Taper Masterclass (Low, Mid & High)</h2>
-        <span>Lesson 6 of 10</span>
+        <h2>Lesson 6: Step-by-Step Taper Fade Guide</h2>
+        <span>Lesson 6 of 8</span>
       </div>
-      <p>A taper fades hair down to the skin exclusively at the <strong>sideburns</strong> and the <strong>nape</strong>, preserving full weight and natural hairlines around the ear perimeters.</p>
+      <p>A <strong>Taper</strong> is different from an all-around fade. A taper only fades down to bare skin at the <strong>sideburns</strong> and the <strong>bottom of the neck</strong>, leaving the hair around the ears dark and full.</p>
 
-      <h3>Low Taper Execution Protocol</h3>
+      <h3>How to Do a Clean Low Taper (Step-by-Step):</h3>
       <ol>
-        <li><strong>Sideburn Baseline:</strong> Place detailing trimmer horizontally at the lower bottom of the sideburn (level with the earlobe). Create a 0.25-inch skin line.</li>
-        <li><strong>First Transition:</strong> Clipper lever open (no guard), cut upward 0.5 inches. Close lever to halfway and flick out the baseline.</li>
-        <li><strong>Guard Ladder:</strong> Attach #1 guard (lever open), cut upward another 0.5 inches. Attach #0.5 guard (lever halfway) to erase the remaining dark line.</li>
-        <li><strong>Nape Taper Baseline:</strong> Set a skin guideline across the bottom 0.5 inches of the neckline with trimmers. Foil-shave the lowest stubble.</li>
-        <li><strong>Nape Blending:</strong> Work upward using lever open &#8594; #0.5 guard &#8594; #1 guard &#8594; #2 guard, blending into the occipital bone weight.</li>
-        <li><strong>C-Cup Edge-Up:</strong> Stretch temple skin taut with the non-dominant thumb. Carve the C-cup curve using only the outer corner of the trimmer blade, finishing with a straight razor at 30°.</li>
+        <li><strong>Step 1 (Sideburn Line):</strong> Take your trimmer and make a straight horizontal line at the bottom of the sideburn.</li>
+        <li><strong>Step 2 (No Guard Open):</strong> Open the clipper lever all the way. Cut up half an inch. Move the lever halfway to blend the bottom line away.</li>
+        <li><strong>Step 3 (#1 Guard):</strong> Put on the #1 guard with the lever open. Cut up another half inch.</li>
+        <li><strong>Step 4 (#0.5 Guard):</strong> Put on the small #0.5 guard. Tap and flick the remaining dark spot until it looks smooth.</li>
+        <li><strong>Step 5 (The Neckline):</strong> Do the exact same steps at the bottom of the neck, fading from skin up into the hair.</li>
+        <li><strong>Step 6 (Edge-up):</strong> Use the corner of your trimmer to make the curved temple line (C-cup) crisp and sharp.</li>
       </ol>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(5)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 6 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(7)">Next Lesson: Haircut Lookbook →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 6 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(7)">Next: Haircut Lookbook & Steps →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 7 ================= -->
+  <!-- ================= LESSON 7: LOOKBOOK & STEP-BY-STEP (HEAD-FOCUSED AI IMAGES) ================= -->
   <div class="lesson-pane" id="lesson-7">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 7: Visual Haircut Lookbook & Complete Step-by-Step Guides</h2>
-        <span>Lesson 7 of 10</span>
+        <h2>Lesson 7: Haircut Catalog & Step-by-Step Guide</h2>
+        <span>Lesson 7 of 8</span>
       </div>
+      <p>Here are the 8 most requested haircuts in the barbershop today. Every card shows a close-up picture of the head and the exact steps to cut it.</p>
 
       <div class="catalog-grid">
+
         <!-- 1. LOW SKIN FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80" alt="Low Skin Fade">
-            <span class="haircut-tag">Modern Fade</span>
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Low Fade Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
           </div>
           <div class="haircut-content">
             <h4>1. Low Skin Fade</h4>
-            <p class="haircut-desc">Skin transition drops low around the occipital bone, leaving dark density above.</p>
+            <p class="haircut-desc">The fade starts very low, right above the ear and down into the neck nape.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Make skin baseline 0.5" above ear using trimmer.</li>
+                <li>Shave stubble underneath with foil shaver.</li>
+                <li>Blend upward using lever open, then #0.5 guard.</li>
+                <li>Connect to top with #1.5 and #2 guards.</li>
+              </ol>
+            </div>
             <table class="spec-table">
-              <tr><td>Baseline:</td><td>0.5" above ear & low nape</td></tr>
-              <tr><td>Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #2</td></tr>
-              <tr><td>Face Match:</td><td>Oblong, Oval, Diamond</td></tr>
+              <tr><td>Best For:</td><td>Oval, Oblong Faces</td></tr>
+              <tr><td>Product:</td><td>Matte Clay (Low Shine)[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2. MID SKIN FADE -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?auto=format&fit=crop&w=600&q=80" alt="Mid Fade Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
+          </div>
+          <div class="haircut-content">
+            <h4>2. Mid Skin Fade</h4>
+            <p class="haircut-desc">The most popular cut. Starts 1 inch above the ear across the back bump.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Set bald line 1 inch above the ear with trimmer.</li>
+                <li>Shave bald with foil shaver.</li>
+                <li>Flick out lines using #0 Open &#8594; #0.5 &#8594; #1 guards.</li>
+                <li>Scissor-cut top hair and blend into sides.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Round, Square, Oval</td></tr>
               <tr><td>Product:</td><td>Midnight Matte Clay[cite: 2]</td></tr>
             </table>
           </div>
         </div>
 
-        <!-- 2. LOW TAPER FADE -->
+        <!-- 3. HIGH SKIN FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=80" alt="Low Taper Fade">
-            <span class="haircut-tag">Classic Clean</span>
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&q=80" alt="High Fade Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
           </div>
           <div class="haircut-content">
-            <h4>2. Low Taper Fade</h4>
-            <p class="haircut-desc">Skin fade isolated strictly to the sideburns and neckline corners.</p>
+            <h4>3. High Skin Fade</h4>
+            <p class="haircut-desc">Faded very high near the top corners of the head. Very clean and sharp.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Set skin line up at the temple corner.</li>
+                <li>Clear all lower hair down to bare skin.</li>
+                <li>Blend fast within 1 inch using #0.5 and #1 guards.</li>
+                <li>Keep top hair thick or textured.</li>
+              </ol>
+            </div>
             <table class="spec-table">
-              <tr><td>Baseline:</td><td>Sideburns & lower neck only</td></tr>
-              <tr><td>Steps:</td><td>Trimmer &#8594; #0.5 &#8594; #1 &#8594; Comb</td></tr>
-              <tr><td>Face Match:</td><td>All face types / Professional</td></tr>
-              <tr><td>Product:</td><td>Classic Styling Pomade[cite: 2]</td></tr>
-            </table>
-          </div>
-        </div>
-
-        <!-- 3. MID SKIN FADE -->
-        <div class="haircut-card">
-          <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?auto=format&fit=crop&w=700&q=80" alt="Mid Skin Fade">
-            <span class="haircut-tag">Signature Cut</span>
-          </div>
-          <div class="haircut-content">
-            <h4>3. Mid Skin Fade</h4>
-            <p class="haircut-desc">Balanced fade line established 1 inch above the ear crossing the occipital bone.</p>
-            <table class="spec-table">
-              <tr><td>Baseline:</td><td>1" above ear & mid occipital</td></tr>
-              <tr><td>Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #1.5</td></tr>
-              <tr><td>Face Match:</td><td>Square, Oval, Round</td></tr>
-              <tr><td>Product:</td><td>Matte Clay & Beard Oil[cite: 2]</td></tr>
-            </table>
-          </div>
-        </div>
-
-        <!-- 4. HIGH SKIN FADE -->
-        <div class="haircut-card">
-          <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=700&q=80" alt="High Skin Fade">
-            <span class="haircut-tag">High Contrast</span>
-          </div>
-          <div class="haircut-content">
-            <h4>4. High Skin Fade</h4>
-            <p class="haircut-desc">Fades up into the parietal ridge, accentuating height on top.</p>
-            <table class="spec-table">
-              <tr><td>Baseline:</td><td>Upper temple line</td></tr>
-              <tr><td>Steps:</td><td>Foil &#8594; #0 Open &#8594; #1 &#8594; #1.5</td></tr>
-              <tr><td>Face Match:</td><td>Round, Square</td></tr>
+              <tr><td>Best For:</td><td>Round Faces (Slims face)</td></tr>
               <tr><td>Product:</td><td>Texture Dust Powder[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4. LOW TAPER FADE -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Taper Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
+          </div>
+          <div class="haircut-content">
+            <h4>4. Clean Low Taper</h4>
+            <p class="haircut-desc">Faded skin only at the sideburn and back neck. Keeps natural side bulk.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Fade sideburns from skin up to #1 guard.</li>
+                <li>Fade bottom neck from skin up to #2 guard.</li>
+                <li>Do not touch or cut the hair behind the ears.</li>
+                <li>Make crisp C-cup lines with razor and gel.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Students & Office workers</td></tr>
+              <tr><td>Product:</td><td>Classic Hair Pomade[cite: 2]</td></tr>
             </table>
           </div>
         </div>
@@ -815,17 +795,24 @@
         <!-- 5. PRECISION BUZZ CUT -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Buzz Cut">
-            <span class="haircut-tag">Low Maintenance</span>
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Buzz Cut Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
           </div>
           <div class="haircut-content">
-            <h4>5. Precision Buzz Cut</h4>
-            <p class="haircut-desc">Even length on top (#2 or #3 guard) paired with clean skin-faded perimeters.</p>
+            <h4>5. Military Buzz Cut</h4>
+            <p class="haircut-desc">Short uniform length on top with a skin fade on the sides. No styling needed.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Cut whole top with #2 or #3 guard against grain.</li>
+                <li>Put a mid or high skin fade on the sides.</li>
+                <li>Make the forehead lineup laser-straight with trimmers.</li>
+                <li>Finish with razor and shaving gel.</li>
+              </ol>
+            </div>
             <table class="spec-table">
-              <tr><td>Top:</td><td>#2 or #3 Guard against grain</td></tr>
-              <tr><td>Sides:</td><td>Mid or High Skin Fade</td></tr>
-              <tr><td>Face Match:</td><td>Square, Oval, Defined Jaw</td></tr>
-              <tr><td>Product:</td><td>Beard Oil / Scalp Cream[cite: 2]</td></tr>
+              <tr><td>Best For:</td><td>Strong jawline, Athletes</td></tr>
+              <tr><td>Product:</td><td>Scalp Lotion or Beard Oil[cite: 2]</td></tr>
             </table>
           </div>
         </div>
@@ -833,168 +820,146 @@
         <!-- 6. MODERN MULLET -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Modern Mullet">
-            <span class="haircut-tag">Street Style</span>
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Mullet Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
           </div>
           <div class="haircut-content">
-            <h4>6. Modern Mullet</h4>
-            <p class="haircut-desc">Clean temple tapers paired with disconnected, flowing lengths down the nape.</p>
+            <h4>6. Modern Flow Mullet</h4>
+            <p class="haircut-desc">Clean, faded temple sides with longer, wavy hair flowing down the neck.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Clip and separate the long back hair.</li>
+                <li>Taper or fade only the sideburns.</li>
+                <li>Trim back hair with scissors, keeping it 3 to 5 inches long.</li>
+                <li>Texture the top so it sweeps naturally.</li>
+              </ol>
+            </div>
             <table class="spec-table">
-              <tr><td>Sides:</td><td>Low Temple Taper / Burst</td></tr>
-              <tr><td>Back:</td><td>3–6" Scissor Layers</td></tr>
-              <tr><td>Face Match:</td><td>Diamond, Oval, Heart</td></tr>
-              <tr><td>Product:</td><td>Sea Salt Spray & Cream[cite: 2]</td></tr>
+              <tr><td>Best For:</td><td>Diamond, Oval, Heart</td></tr>
+              <tr><td>Product:</td><td>Sea Salt Spray[cite: 2]</td></tr>
             </table>
           </div>
         </div>
+
+        <!-- 7. TEXTURED FRENCH CROP -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="French Crop Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
+          </div>
+          <div class="haircut-content">
+            <h4>7. French Crop</h4>
+            <p class="haircut-desc">Top hair is combed forward with a straight fringe line across the forehead.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Do a high skin fade on back and sides.</li>
+                <li>Comb all top hair forward to the face.</li>
+                <li>Point-cut with scissors to create chunky texture.</li>
+                <li>Cut straight blunt fringe across the forehead.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Receding hairlines, Oval</td></tr>
+              <tr><td>Product:</td><td>Volumizing Matte Powder[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 8. CLASSIC SIDE PART -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Side Part Head Close-up">
+            <span class="haircut-tag">Head Close-Up</span>
+          </div>
+          <div class="haircut-content">
+            <h4>8. Classic Side Part</h4>
+            <p class="haircut-desc">Gentleman's haircut parted on one side with clean, tapered edges.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Find the natural part line above the eyebrow.</li>
+                <li>Taper the sides using #2 down to #1 guard.</li>
+                <li>Scissor-cut the top, keeping the front fringe longest.</li>
+                <li>Shave a razor part line if requested.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Professional & Formal style</td></tr>
+              <tr><td>Product:</td><td>High Shine Water Pomade[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
       </div>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(6)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 7 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(8)">Next Lesson: Maintenance →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 7 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(8)">Next: Tool Care & Setup →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 8 ================= -->
+  <!-- ================= LESSON 8: TOOL CARE & SETUP ================= -->
   <div class="lesson-pane" id="lesson-8">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Chapter 8: Maintenance & Care of Shears, Clippers & Razors</h2>
-        <span>Lesson 8 of 10</span>
+        <h2>Lesson 8: Tool Care, Zero-Gapping & Station Setup</h2>
+        <span>Lesson 8 of 8</span>
       </div>
 
-      <h3>1. Daily Scissor Maintenance Protocol</h3>
+      <h3>How to Oil Your Clippers (The 3-Drop Rule):</h3>
+      <p>Clean hair out with a brush first. Put <strong>3 drops of oil across the blade teeth</strong> and 1 drop on each back corner before and after every client. This keeps the clipper cool, sharp, and running fast.</p>
+
+      <h3>How to Zero-Gap Your Clipper:</h3>
       <ol>
-        <li><strong>Cleaning:</strong> At the end of each shift, wipe blades thoroughly using a soft microfiber cloth with 70% isopropyl alcohol to remove hair, styling chemicals, and moisture.</li>
-        <li><strong>Tension Adjustment:</strong> Hold the shears by the finger ring vertically. Lift the thumb ring to 90° and let it drop. If it drops completely shut, it is too loose. If it stays completely open, it is too tight. It should stop smoothly at approximately 45°.</li>
-        <li><strong>Oiling the Pivot:</strong> Place one small drop of shear oil directly into the pivot screw point daily. Open and close the shears several times to disperse the oil and wipe away excess.</li>
+        <li>Loosen the two back screws on the bottom blade slightly with a screwdriver.</li>
+        <li>Slide the moving blade up so the teeth sit <strong>0.5mm behind</strong> the front teeth.</li>
+        <li><strong>DANGER:</strong> The moving blade must NEVER stick out past the front blade, or it will cut the client's skin.</li>
+        <li>Tighten the screws evenly while checking that the blades are straight.</li>
       </ol>
 
-      <h3>2. Clipper Maintenance & The 3-Drop Rule</h3>
-      <p>Always brush out hair from the blade teeth after every service. Apply <strong>three drops of clipper oil</strong> across the cutting teeth and one drop on each rear rail heel before and after every client. Test blade temperature against your inner wrist every 10 minutes to protect clients from thermal discomfort.</p>
-
-      <h3>3. Clipper Zero-Gapping Step-by-Step</h3>
-      <ol>
-        <li>Loosen the two screws on the still blade by half a turn.</li>
-        <li>Slide the moving blade upward until its teeth sit <strong>0.1 mm to 0.5 mm</strong> behind the still blade edge.</li>
-        <li><strong>SAFETY RULE:</strong> The moving blade must never extend past the still blade. An overlapping moving blade will pinch and cut the client's skin.</li>
-        <li>Tighten the screws evenly while holding the blades parallel against a flat surface.</li>
-      </ol>
+      <div class="callout-box">
+        <strong>Station Setup Checklist Before Starting:</strong>
+        <p style="margin:4px 0 0; font-size:8.5pt;">Clean cape ready • White neck strip loaded • Blue Barbicide jar filled • Sharp razor blade ready in shavette • Clippers oiled and charged.</p>
+      </div>
 
       <div class="lesson-nav-footer">
         <button class="nav-btn" onclick="switchLesson(7)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 8 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(9)">Next Lesson: Business Launch →</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= LESSON 9 ================= -->
-  <div class="lesson-pane" id="lesson-9">
-    <div class="chapter-card">
-      <div class="chapter-header">
-        <h2>Chapter 9: Launching a Barbershop & Operations Infrastructure</h2>
-        <span>Lesson 9 of 10</span>
-      </div>
-      <p>Opening a barbershop requires structured spatial planning, local legal registration, and connected digital masterfiles to manage staff commissions, booking schedules, and inventory[cite: 1, 2].</p>
-
-      <h3>1. Station Dimensions & Physical Layout</h3>
-      <ul>
-        <li><strong>Chair Clearance:</strong> Maintain a minimum of 4.5 to 5 linear feet between the centers of each barber chair.</li>
-        <li><strong>Working Radius:</strong> Keep at least 4 to 5 feet of clear space behind each chair to allow the barber to navigate comfortably.</li>
-        <li><strong>Mirror Lighting:</strong> Install diffuse 4000K–5000K daylight-balanced LED lighting at eye level on both sides of the mirror to eliminate shadows around the client's neck and ears.</li>
-      </ul>
-
-      <h3>2. Philippine Business Compliance Checklist</h3>
-      <table class="data-table">
-        <thead>
-          <tr><th>Step / Permit</th><th>Issuing Agency</th><th>Operational Requirement</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>1. Trade Name Registration</strong></td><td>DTI (Sole Proprietorship) or SEC (Corp)</td><td>Registers and protects the brand name (e.g., <em>Wilsons Midnight Barbers</em>).</td></tr>
-          <tr><td><strong>2. Barangay Business Clearance</strong></td><td>Local Barangay Hall</td><td>Authorizes commercial operations within the local barangay jurisdiction.</td></tr>
-          <tr><td><strong>3. Mayor's / Business Permit</strong></td><td>City / Municipal Hall (BPLO)</td><td>Annual operating license; requires fire safety, building, and electrical clearances.</td></tr>
-          <tr><td><strong>4. BIR Registration (Form 2303)</strong></td><td>Bureau of Internal Revenue</td><td>Certificate of Registration, printing of Official Receipts (OR), and POS registration[cite: 2].</td></tr>
-          <tr><td><strong>5. Sanitation Permit & Health Cards</strong></td><td>City Health Office</td><td>Annual sanitary inspection and health cards (chest X-ray, stool exam) for all barbers.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>3. Operational Databases (The Three Core Masterfiles)</h3>
-      <ol>
-        <li><strong>Employee Masterfile:</strong> Contains staff contact information, hiring records, and commission split percentages[cite: 2]. Links directly to Daily Time Records (DTR) and automated payroll math[cite: 1, 2].</li>
-        <li><strong>Service Masterfile:</strong> Sets standardized service prices, point values, and duration intervals (e.g., Fade = 45 min, Hot Towel = 30 min) to prevent scheduling overlaps[cite: 2].</li>
-        <li><strong>Product Masterfile:</strong> Distinguishes <strong>Retail</strong> inventory from <strong>Backbar</strong> shop supplies[cite: 2]. Automatically updates stock counts and triggers reorder warnings when counts drop below thresholds[cite: 1, 2].</li>
-      </ol>
-
-      <div class="lesson-nav-footer">
-        <button class="nav-btn" onclick="switchLesson(8)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 9 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(10)">Next Lesson: Practical Rubric →</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= LESSON 10 ================= -->
-  <div class="lesson-pane" id="lesson-10">
-    <div class="chapter-card">
-      <div class="chapter-header">
-        <h2>Chapter 10: Practical Examination Rubric & Certification</h2>
-        <span>Lesson 10 of 10</span>
-      </div>
-      <p>To graduate and receive the official Academy Certificate of Completion, trainees must achieve a <strong>minimum score of 75 points</strong> across five technical competencies during their Day 3 live model exam.</p>
-
-      <table class="data-table">
-        <thead>
-          <tr><th>Competency Category</th><th>Max Points</th><th>Required Performance Standards</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>1. Station Hygiene & Prep</strong></td><td>20 pts</td><td>Sanitizes hands, secures sanitary neck strip, maintains immersion protocols, uses clean tools.</td></tr>
-          <tr><td><strong>2. Guideline & Fade Blend</strong></td><td>30 pts</td><td>Establishes a level baseline, achieves a seamless transition ladder, eliminates dark weight spots.</td></tr>
-          <tr><td><strong>3. Shear Work & Sectioning</strong></td><td>20 pts</td><td>Clean horseshoe parting, uniform top length, smooth scissor-over-comb blending into the parietal crest.</td></tr>
-          <tr><td><strong>4. Straight Razor Detailing</strong></td><td>15 pts</td><td>Safe 30° blade plane, non-dominant hand stretches skin taut, crisp lines without nicks or irritation.</td></tr>
-          <tr><td><strong>5. Time & Station Discipline</strong></td><td>15 pts</td><td>Complete service executed within 90 minutes; station swept and disinfected prior to client dismissal.</td></tr>
-        </tbody>
-      </table>
-      <div style="margin-top:10px; font-weight:bold; color:var(--accent-gold);">
-        Total: 100 Points • Passing Standard: 75 Points • Endorsed by Certified Master Trainer
-      </div>
-
-      <div class="lesson-nav-footer">
-        <button class="nav-btn" onclick="switchLesson(9)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 10 / 10</span>
-        <button class="nav-btn" onclick="switchLesson(1)">Restart From Lesson 1 ↺</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 8 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(1)">Back to Start (Lesson 1) ↺</button>
       </div>
     </div>
   </div>
 
 </div>
 
-<!-- INTERACTIVE NAVIGATION ENGINE -->
+<!-- TAB SWITCHING ENGINE -->
 <script>
-  function switchLesson(lessonNumber) {
+  function switchLesson(lessonNum) {
     // 1. Hide all lesson panes
     const panes = document.querySelectorAll('.lesson-pane');
     panes.forEach(pane => pane.classList.remove('active'));
 
-    // 2. Remove active state from all tab buttons
+    // 2. Un-highlight tab buttons
     const buttons = document.querySelectorAll('.tab-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // 3. Show selected lesson pane
-    const targetPane = document.getElementById('lesson-' + lessonNumber);
-    if (targetPane) {
-      targetPane.classList.add('active');
+    // 3. Show selected lesson
+    const target = document.getElementById('lesson-' + lessonNum);
+    if (target) {
+      target.classList.add('active');
     }
 
-    // 4. Activate corresponding tab button
-    if (buttons[lessonNumber - 1]) {
-      buttons[lessonNumber - 1].classList.add('active');
-      buttons[lessonNumber - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    // 4. Highlight active button
+    if (buttons[lessonNum - 1]) {
+      buttons[lessonNum - 1].classList.add('active');
+      buttons[lessonNum - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
 
-    // 5. Smoothly scroll window back to top of lesson
+    // 5. Scroll smoothly to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
