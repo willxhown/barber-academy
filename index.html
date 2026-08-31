@@ -10,12 +10,10 @@
     --bg-card: #181b24;
     --border-color: #2a2f3f;
     --accent-gold: #d4af37;
-    --accent-gold-hover: #b8972e;
     --text-main: #f8fafc;
     --text-muted: #9ca3af;
     --success: #10b981;
     --danger: #ef4444;
-    --info: #3b82f6;
   }
 
   @page {
@@ -37,7 +35,7 @@
   body {
     background-color: var(--bg-dark);
     color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-size: 9.5pt;
     line-height: 1.55;
     padding: 24px 16px;
@@ -50,7 +48,6 @@
     margin: 0 auto;
   }
 
-  /* Header & Navigation */
   .hero-banner {
     background: #12151d;
     border: 2px solid var(--accent-gold);
@@ -60,7 +57,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   }
 
   .hero-tag {
@@ -90,7 +86,6 @@
     margin-top: 4px;
   }
 
-  /* Quick Table of Contents Bar */
   .toc-bar {
     background: #141822;
     border: 1px solid var(--border-color);
@@ -113,14 +108,12 @@
     text-decoration: underline;
   }
 
-  /* Chapter Box */
   .chapter-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 22px;
     margin-bottom: 24px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   }
 
   .chapter-header {
@@ -158,7 +151,6 @@
     font-size: 9pt;
     color: #cbd5e1;
     margin-bottom: 12px;
-    text-align: justify;
   }
 
   ul, ol {
@@ -176,7 +168,6 @@
     color: #fff;
   }
 
-  /* Image Showcase Component */
   .img-showcase {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -196,6 +187,7 @@
     height: 190px;
     object-fit: cover;
     display: block;
+    background-color: #202735;
   }
 
   .img-caption {
@@ -213,7 +205,6 @@
     color: var(--text-muted);
   }
 
-  /* Haircut Showcase Split */
   .haircut-profile {
     display: flex;
     background: #11141c;
@@ -226,6 +217,8 @@
   .haircut-profile img {
     width: 240px;
     object-fit: cover;
+    background-color: #202735;
+    flex-shrink: 0;
   }
 
   .haircut-details {
@@ -233,7 +226,6 @@
     flex: 1;
   }
 
-  /* Data Tables */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -249,7 +241,6 @@
     border-bottom: 1px solid var(--border-color);
     text-transform: uppercase;
     font-size: 7.5pt;
-    letter-spacing: 0.5px;
   }
 
   td {
@@ -259,11 +250,6 @@
     vertical-align: top;
   }
 
-  tr:hover td {
-    background: rgba(255,255,255,0.02);
-  }
-
-  /* Callout Boxes */
   .callout-box {
     background: #121620;
     border-left: 3px solid var(--accent-gold);
@@ -290,7 +276,6 @@
     margin-bottom: 4px;
   }
 
-  /* SVG Diagrams */
   .svg-container {
     background: #10131a;
     border: 1px solid var(--border-color);
@@ -303,6 +288,19 @@
   .page-break {
     page-break-before: always;
     break-before: page;
+  }
+
+  @media (max-width: 768px) {
+    .img-showcase {
+      grid-template-columns: 1fr;
+    }
+    .haircut-profile {
+      flex-direction: column;
+    }
+    .haircut-profile img {
+      width: 100%;
+      height: 220px;
+    }
   }
 
   @media print {
@@ -347,7 +345,7 @@
 
 <div class="manual-wrapper">
 
-  <!-- ================= HERO COVER ================= -->
+  <!-- HERO COVER -->
   <div class="hero-banner">
     <div>
       <span class="hero-tag">Certified Master Trainer Program</span>
@@ -361,9 +359,9 @@
     </div>
   </div>
 
-  <!-- TABLE OF CONTENTS -->
+  <!-- TOC -->
   <div class="toc-bar no-print">
-    <span><strong>Quick Chapters:</strong></span>
+    <span><strong>Chapters:</strong></span>
     <a href="#ch1">1. History & Craft</a>
     <a href="#ch2">2. Tools & Zero-Gap</a>
     <a href="#ch3">3. Sanitation & Safety</a>
@@ -374,27 +372,27 @@
     <a href="#ch8">8. Grading Rubric</a>
   </div>
 
-  <!-- ================= CHAPTER 1 ================= -->
+  <!-- CHAPTER 1 -->
   <div class="chapter-card" id="ch1">
     <div class="chapter-header">
       <h2>Chapter 1: The History & Evolution of Barbering</h2>
       <span>Lineage, Culture & Ritual</span>
     </div>
-    <p>Barbering is among humanity's oldest and most revered recorded professions, spanning over six thousand years of ceremonial prestige, surgical responsibility, and social leadership.</p>
+    <p>Barbering is among humanity's oldest recorded professions, spanning over six thousand years of ceremonial prestige, surgical responsibility, and social leadership.</p>
     
     <h3>1. Ancient Civilizations & Sacred Grooming</h3>
     <ul>
-      <li><strong>Ancient Egypt (c. 5000–3000 BCE):</strong> Shaving facial and body hair was a sacred act of purification to ward off spirits, heat exhaustion, and parasites. Master barbers like <em>Meryma’at</em> held high priestly status, shaving the high priests of Amun every three days with curved bronze razors.</li>
-      <li><strong>Classical Greece & Rome (c. 500 BCE–400 CE):</strong> The Greek <em>tonsor</em> served as the civic town square for philosophy, politics, and civic debate. In Rome, a young man's first official shave (<em>depositio barbae</em>) was an essential legal rite of passage into Roman citizenship.</li>
+      <li><strong>Ancient Egypt (c. 5000–3000 BCE):</strong> Shaving facial and body hair was a sacred act of purification. Master barbers like <em>Meryma’at</em> held high priestly status, shaving the high priests of Amun every three days with curved bronze razors.</li>
+      <li><strong>Classical Greece & Rome (c. 500 BCE–400 CE):</strong> The Greek <em>tonsor</em> served as the civic town square for philosophy and debate. In Rome, a young man's first official shave (<em>depositio barbae</em>) was an essential rite of passage into Roman citizenship.</li>
     </ul>
 
-    <h3>2. The Barber-Surgeon Era & Anatomy of the Barber Pole</h3>
-    <p>Throughout Medieval Europe (1100s–1745), barbers did not merely groom hair; they performed surgical bloodletting, wound cauterization, and teeth extraction. The world-famous rotating barber pole is a direct artifact of this surgical history:</p>
+    <h3>2. The Barber-Surgeon Era & The Barber Pole</h3>
+    <p>Throughout Medieval Europe (1100s–1745), barbers performed surgical bloodletting, wound cauterization, and teeth extraction alongside grooming. The rotating barber pole is a direct artifact of this surgical history:</p>
     <ul>
-      <li><strong>Red Spiral:</strong> Represents arterial blood drawn during therapeutic venesection.</li>
-      <li><strong>White Spiral:</strong> Represents clean linen bandages washed and hung outdoors on a staff to dry in the wind.</li>
-      <li><strong>Blue Spiral:</strong> Added in Anglo-American traditions to signify venous blood (and patriotic color alignment).</li>
-      <li><strong>Brass Basin (Top & Bottom Caps):</strong> Represents the brass vessel used to catch drained blood during procedures.</li>
+      <li><strong>Red Spiral:</strong> Represents arterial blood drawn during medical care.</li>
+      <li><strong>White Spiral:</strong> Represents clean linen bandages washed and hung outdoors to dry.</li>
+      <li><strong>Blue Spiral:</strong> Added in Anglo-American traditions to signify venous blood.</li>
+      <li><strong>Brass Basin:</strong> Represents the vessel used to catch blood during procedures.</li>
     </ul>
     <div class="callout-box">
       <div class="callout-title">The 1745 Separation Act</div>
@@ -402,25 +400,26 @@
     </div>
   </div>
 
-  <!-- ================= CHAPTER 2 ================= -->
+  <!-- CHAPTER 2 -->
   <div class="chapter-card" id="ch2">
     <div class="chapter-header">
       <h2>Chapter 2: Professional Equipment & Tool Anatomy</h2>
       <span>Hardware Engineering, Calibration & Care</span>
     </div>
 
+    <!-- IMAGES FIXED WITH DIRECT RELIABLE URLS -->
     <div class="img-showcase">
       <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop" alt="Workstation">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Master Workstation">
         <div class="img-caption">
           <strong>Master Workstation Layout</strong>
           <span>Sanitized station featuring immersion jars, shears, guards, and cordless motors.</span>
         </div>
       </div>
       <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1593702295094-ada7554100c3?q=80&w=800&auto=format&fit=crop" alt="Clippers">
+        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Cordless Clippers">
         <div class="img-caption">
-          <strong>Cordless Rotary Clippers</strong>
+          <strong>Cordless Precision Clippers & Tools</strong>
           <span>High-torque adjustable motor equipped with carbon-steel taper blades.</span>
         </div>
       </div>
@@ -445,7 +444,7 @@
     <ol>
       <li>Loosen the two rear screws holding the still blade in place by half a turn using a Phillips screwdriver.</li>
       <li>Slide the cutting blade upward until its teeth sit <strong>0.5 mm to 0.1 mm</strong> behind the still blade edge.</li>
-      <li><strong>SAFETY WARNING:</strong> Never allow the moving cutting blade to extend past or level with the still blade edge, as this will cut and pinch client skin.</li>
+      <li><strong>SAFETY WARNING:</strong> Never allow the moving cutting blade to extend past or level with the still blade edge, as this will pinch or cut client skin.</li>
       <li>Tighten the screws evenly while pressing the blades against a flat mirror to maintain horizontal parallelism.</li>
     </ol>
 
@@ -465,23 +464,24 @@
 
   <div class="page-break"></div>
 
-  <!-- ================= CHAPTER 3 ================= -->
+  <!-- CHAPTER 3 -->
   <div class="chapter-card" id="ch3">
     <div class="chapter-header">
       <h2>Chapter 3: Hygiene, Disinfection & Station Safety</h2>
       <span>Cross-Contamination & Bloodborne Pathogen Defense</span>
     </div>
 
+    <!-- IMAGES FIXED WITH DIRECT RELIABLE URLS -->
     <div class="img-showcase">
       <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=800&auto=format&fit=crop" alt="Hot Towel">
+        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Hot Towel Preparation">
         <div class="img-caption">
           <strong>Sanitary Hot-Towel Preparation</strong>
           <span>Hydrates coarse hair follicles and softens pores safely prior to razor work.</span>
         </div>
       </div>
       <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800&auto=format&fit=crop" alt="Shear Work">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Sanitized Shear Work">
         <div class="img-caption">
           <strong>Sanitized Scissor-Over-Comb Precision</strong>
           <span>Sterile comb tensioning and clean ergonomic posture during blending.</span>
@@ -502,7 +502,7 @@
     <p>Apply three drops of lubricating oil across the blade teeth and one drop on each rear rail heel before and after every client. Test blade temperature against the inside of your wrist every 10 minutes to protect clients from thermal discomfort.</p>
   </div>
 
-  <!-- ================= CHAPTER 4 ================= -->
+  <!-- CHAPTER 4 -->
   <div class="chapter-card" id="ch4">
     <div class="chapter-header">
       <h2>Chapter 4: Head Geography & Fade Architecture</h2>
@@ -545,7 +545,7 @@
 
   <div class="page-break"></div>
 
-  <!-- ================= CHAPTER 5 (NEW EXPANSION) ================= -->
+  <!-- CHAPTER 5 -->
   <div class="chapter-card" id="ch5">
     <div class="chapter-header">
       <h2>Chapter 5: Face Shape Analysis & Style Compatibility</h2>
@@ -592,7 +592,7 @@
     </table>
   </div>
 
-  <!-- ================= CHAPTER 6 (NEW EXPANSION) ================= -->
+  <!-- CHAPTER 6 -->
   <div class="chapter-card" id="ch6">
     <div class="chapter-header">
       <h2>Chapter 6: Step-by-Step Practical Cutting Protocols</h2>
@@ -601,7 +601,7 @@
 
     <!-- Cut 1: Mid Skin Fade -->
     <div class="haircut-profile">
-      <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?q=80&w=600&auto=format&fit=crop" alt="Skin Fade">
+      <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?auto=format&fit=crop&w=800&q=80" alt="Mid Skin Fade">
       <div class="haircut-details">
         <h3 style="margin-top:0; color:var(--accent-gold);">Masterclass 1: The Mid Skin Fade & Beard Blend</h3>
         <p><strong>Step-by-Step Execution:</strong></p>
@@ -618,17 +618,17 @@
 
     <!-- Cut 2: Textured French Crop -->
     <div class="haircut-profile">
-      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=600&auto=format&fit=crop" alt="Textured Crop">
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Classic & Modern Styles">
       <div class="haircut-details">
-        <h3 style="margin-top:0; color:var(--accent-gold);">Masterclass 2: The Textured French Crop</h3>
+        <h3 style="margin-top:0; color:var(--accent-gold);">Masterclass 2: The Modern Executive Taper & Crop</h3>
         <p><strong>Step-by-Step Execution:</strong></p>
         <ol>
           <li><strong>Horseshoe Isolation:</strong> Part the crown horizontally from temple to temple, clipping the top hair out of the way.</li>
-          <li><strong>Side Fade:</strong> Execute a High Skin Drop Fade, taking the bald transition up near the upper temple.</li>
-          <li><strong>Top Length Guideline:</strong> Unclip the top hair. Dampen lightly and pull a vertical guideline down the center of the head, cutting with shears at a 90° elevation.</li>
-          <li><strong>Deep Point Cutting:</strong> Angle shears parallel to hair strands and point-cut down into the top volume to create chunky separation.</li>
-          <li><strong>Blunt Fringe:</strong> Comb front fringe forward onto the forehead. Using detailing trimmers or shears, cut a crisp horizontal line across the forehead.</li>
-          <li><strong>Product Finish:</strong> Blow-dry forward, then work a dime-sized amount of styling texture powder into the roots.</li>
+          <li><strong>Side Taper:</strong> Execute a clean Low-to-Mid Taper, keeping weight full around the parietal ridge.</li>
+          <li><strong>Top Length Guideline:</strong> Unclip top hair. Dampen lightly and pull a vertical guideline down the center of the head, cutting with shears at a 90° elevation.</li>
+          <li><strong>Deep Point Cutting:</strong> Angle shears parallel to hair strands and point-cut into top volume to create chunky texture.</li>
+          <li><strong>Detailing & Lineup:</strong> Comb fringe into position. Using detailing trimmers, edge the temple arches and sideburns cleanly.</li>
+          <li><strong>Product Finish:</strong> Blow-dry into place and finish with Midnight Matte Clay for natural separation.</li>
         </ol>
       </div>
     </div>
@@ -636,7 +636,7 @@
 
   <div class="page-break"></div>
 
-  <!-- ================= CHAPTER 7 (NEW EXPANSION) ================= -->
+  <!-- CHAPTER 7 -->
   <div class="chapter-card" id="ch7">
     <div class="chapter-header">
       <h2>Chapter 7: Client Consultation & Retail Psychology</h2>
@@ -653,33 +653,33 @@
     </ol>
 
     <div class="callout-box success">
-      <div class="callout-title">Retail Upselling & Shop Integration[cite: 2]</div>
-      <p style="margin:0;">Do not simply sell a haircut—educate the client on aftercare. Always demonstrate which product was used (e.g., <strong>Midnight Matte Clay</strong> for matte finishes, or <strong>Cedarwood Conditioning Beard Oil</strong> for shine and hydration)[cite: 1, 2]. Log their purchased products into the <strong>Product Masterfile</strong> at checkout[cite: 2] to ensure the shop automatically tracks commission splits and triggers reorder levels when stock runs low[cite: 1, 2]!</p>
+      <div class="callout-title">Retail Upselling & Shop Integration</div>
+      <p style="margin:0;">Do not simply sell a haircut—educate the client on aftercare. Always demonstrate which product was used (e.g., <strong>Midnight Matte Clay</strong> for matte finishes, or <strong>Cedarwood Conditioning Beard Oil</strong> for shine and hydration). Log their purchased products into the <strong>Product Masterfile</strong> at checkout[cite: 2] to ensure the shop automatically tracks commission splits and triggers reorder levels when stock runs low[cite: 2]!</p>
     </div>
   </div>
 
-  <!-- ================= CHAPTER 8 ================= -->
+  <!-- CHAPTER 8 -->
   <div class="chapter-card" id="ch8">
     <div class="chapter-header">
       <h2>Chapter 8: Practical Examination Rubric & Certification</h2>
       <span>100-Point Day 3 Live Model Evaluation</span>
     </div>
-    <p>To graduate and receive the official Academy Certificate of Completion[cite: 1], trainees must achieve a <strong>minimum score of 75 points</strong>[cite: 1] across five technical competencies on their Day 3 live model exam[cite: 1].</p>
+    <p>To graduate and receive the official Academy Certificate of Completion, trainees must achieve a <strong>minimum score of 75 points</strong> across five technical competencies on their Day 3 live model exam.</p>
 
     <table>
       <thead>
         <tr><th>Competency Category</th><th>Max Points</th><th>Required Performance Standards</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>1. Station Hygiene & Prep</strong></td><td>20 pts</td><td>Sanitizes hands, secures sanitary neck strip, maintains immersion protocols, uses clean tools[cite: 1].</td></tr>
-        <tr><td><strong>2. Guideline & Fade Blend</strong></td><td>30 pts</td><td>Establishes a level baseline, achieves a seamless transition ladder, eliminates dark weight spots[cite: 1].</td></tr>
-        <tr><td><strong>3. Shear Work & Sectioning</strong></td><td>20 pts</td><td>Clean horseshoe parting, uniform top length, smooth scissor-over-comb blending into the parietal crest[cite: 1].</td></tr>
-        <tr><td><strong>4. Straight Razor Detailing</strong></td><td>15 pts</td><td>Safe 30° blade plane, non-dominant hand stretches skin taut, crisp lines without nicks or irritation[cite: 1].</td></tr>
-        <tr><td><strong>5. Time & Station Discipline</strong></td><td>15 pts</td><td>Complete service executed within 90 minutes; station swept and disinfected prior to client dismissal[cite: 1].</td></tr>
+        <tr><td><strong>1. Station Hygiene & Prep</strong></td><td>20 pts</td><td>Sanitizes hands, secures sanitary neck strip, maintains immersion protocols, uses clean tools.</td></tr>
+        <tr><td><strong>2. Guideline & Fade Blend</strong></td><td>30 pts</td><td>Establishes a level baseline, achieves a seamless transition ladder, eliminates dark weight spots.</td></tr>
+        <tr><td><strong>3. Shear Work & Sectioning</strong></td><td>20 pts</td><td>Clean horseshoe parting, uniform top length, smooth scissor-over-comb blending into the parietal crest.</td></tr>
+        <tr><td><strong>4. Straight Razor Detailing</strong></td><td>15 pts</td><td>Safe 30° blade plane, non-dominant hand stretches skin taut, crisp lines without nicks or irritation.</td></tr>
+        <tr><td><strong>5. Time & Station Discipline</strong></td><td>15 pts</td><td>Complete service executed within 90 minutes; station swept and disinfected prior to client dismissal.</td></tr>
       </tbody>
     </table>
     <div style="margin-top:10px; font-weight:bold; color:var(--accent-gold);">
-      Total: 100 Points • Passing Standard: 75 Points • Endorsed by Certified Master Trainer[cite: 1]
+      Total: 100 Points • Passing Standard: 75 Points • Endorsed by Certified Master Trainer
     </div>
   </div>
 
