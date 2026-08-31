@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilsons Midnight Barbers Academy - Master Training Manual & Shop Blueprint</title>
+<title>Wilsons Midnight Barbers Academy - Master Training Manual</title>
 <style>
   :root {
     --bg-dark: #0f1117;
@@ -46,7 +46,7 @@
   }
 
   .manual-wrapper {
-    max-width: 1040px;
+    max-width: 1060px;
     margin: 0 auto;
   }
 
@@ -111,7 +111,6 @@
     text-decoration: underline;
   }
 
-  /* Chapter Cards */
   .chapter-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -171,45 +170,7 @@
     color: #fff;
   }
 
-  /* Image Showcase Layouts */
-  .img-showcase {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin: 14px 0;
-  }
-
-  .img-card {
-    background: #11141c;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .img-card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-    background-color: #202735;
-  }
-
-  .img-caption {
-    padding: 10px 12px;
-  }
-
-  .img-caption strong {
-    display: block;
-    color: #fff;
-    font-size: 8.5pt;
-  }
-
-  .img-caption span {
-    font-size: 7.5pt;
-    color: var(--text-muted);
-  }
-
-  /* Lookbook Grid */
+  /* Catalog / Lookbook Grid */
   .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -224,12 +185,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s, border-color 0.2s;
-  }
-
-  .haircut-card:hover {
-    border-color: var(--accent-gold);
-    transform: translateY(-2px);
   }
 
   .haircut-img-wrap {
@@ -259,7 +214,6 @@
     text-transform: uppercase;
     padding: 2px 7px;
     border-radius: 3px;
-    backdrop-filter: blur(4px);
   }
 
   .haircut-content {
@@ -309,7 +263,6 @@
     text-align: right;
   }
 
-  /* Data Tables */
   table.data-table {
     width: 100%;
     border-collapse: collapse;
@@ -359,6 +312,21 @@
     text-align: center;
   }
 
+  .anatomy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 14px 0;
+  }
+
+  .anatomy-card {
+    background: #10131a;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+
   .page-break {
     page-break-before: always;
     break-before: page;
@@ -384,8 +352,8 @@
   <div class="hero-banner">
     <div>
       <span class="hero-tag">Official Master Curriculum</span>
-      <h1 class="hero-title">Barbering Handbook & Business Blueprint</h1>
-      <div class="hero-sub">Wilsons Midnight Barbers Academy • From Fundamental Theory to Enterprise Ownership</div>
+      <h1 class="hero-title">Barbering Handbook & Technical Compendium</h1>
+      <div class="hero-sub">Wilsons Midnight Barbers Academy • Comprehensive Theory, Mechanics, Anatomy & Practice</div>
     </div>
     <div style="text-align:right;" class="no-print">
       <button onclick="window.print()" style="background:var(--accent-gold); color:#000; border:none; padding:10px 16px; border-radius:6px; font-weight:bold; cursor:pointer; font-size:8.5pt;">
@@ -396,289 +364,234 @@
 
   <!-- TOC BAR -->
   <div class="toc-bar no-print">
-    <span><strong>Curriculum Modules:</strong></span>
-    <a href="#ch1">1. History & Traditions</a>
-    <a href="#ch2">2. Tools & Zero-Gap</a>
-    <a href="#ch3">3. Cosmetology vs. Barbering</a>
-    <a href="#ch4">4. Trichology & The Hair</a>
-    <a href="#ch5">5. Draping, Wash & Blow Dry</a>
-    <a href="#ch6">6. Head Anatomy & Fades</a>
+    <span><strong>Curriculum Chapters:</strong></span>
+    <a href="#ch1">1. Principles & Scissor Shaping</a>
+    <a href="#ch2">2. Materials, Implements & Legend</a>
+    <a href="#ch3">3. 4-View Head Anatomy</a>
+    <a href="#ch4">4. Draping, Wash & Blow Dry</a>
+    <a href="#ch5">5. Face Shapes & Styling</a>
+    <a href="#ch6">6. Step-by-Step Tapers</a>
     <a href="#ch7">7. Haircut Lookbook</a>
-    <a href="#ch8">8. Face Shapes</a>
-    <a href="#ch9">9. Consultation & Retail</a>
-    <a href="#ch10">10. Launching a Barbershop</a>
-    <a href="#ch11">11. Grading Rubric</a>
+    <a href="#ch8">8. Equipment Maintenance</a>
+    <a href="#ch9">9. Masterfile Business Launch</a>
+    <a href="#ch10">10. Practical Rubric</a>
   </div>
 
-  <!-- CHAPTER 1: HISTORY -->
+  <!-- CHAPTER 1: BASIC PRINCIPLES & SCISSOR SHAPING -->
   <div class="chapter-card" id="ch1">
     <div class="chapter-header">
-      <h2>Chapter 1: The History & Evolution of Barbering</h2>
-      <span>Origins & Craft Lineage</span>
+      <h2>Chapter 1: Foundations, Principles & Scissor Hair Shaping</h2>
+      <span>Form Geometry, Elevation Angles & Scissor Mechanics</span>
     </div>
-    <p>Barbering is among humanity's oldest recorded professions, spanning over six thousand years of ceremonial prestige, surgical responsibility, and social leadership.</p>
-    
-    <h3>1. Ancient Civilizations & Sacred Grooming</h3>
+    <p>Haircutting is structural architecture applied to an organic, curved surface. Mastery requires strict control of angles, tension, and shear biomechanics.</p>
+
+    <h3>1. The Four Fundamental Haircutting Forms</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Form Structure</th><th>Elevation Angle</th><th>Weight Distribution</th><th>Visual Result</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Solid Form (Blunt Cut)</strong></td><td>0° (Natural Fall)</td><td>Maximum weight at the perimeter line.</td><td>Solid horizontal/diagonal edge; zero graduation.</td></tr>
+        <tr><td><strong>Graduated Form (Wedge)</strong></td><td>1° to 89° (Commonly 45°)</td><td>Weight builds up along an interior ridge.</td><td>Stacked, bevelled volume with visible contour.</td></tr>
+        <tr><td><strong>Uniformly Layered Form</strong></td><td>90° Straight from scalp</td><td>Equal length throughout the head silhouette.</td><td>Rounded contour; weight is dispersed evenly.</td></tr>
+        <tr><td><strong>Progressive (Square) Layers</strong></td><td>90° to 180° Elevated</td><td>Shorter interior crown, longer perimeters.</td><td>Masculine, flat top planes; removes bulky crowns.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2. Parting & Elevation Principles</h3>
     <ul>
-      <li><strong>Ancient Egypt (c. 5000–3000 BCE):</strong> Shaving facial and body hair was an essential purification rite. Master barbers like <em>Meryma’at</em> held high priestly status, shaving high priests of Amun every three days with curved bronze razors.</li>
-      <li><strong>Classical Greece & Rome (c. 500 BCE–400 CE):</strong> The Greek <em>tonsor</em> was the civic gathering place for philosophy and debate. In Rome, a young man's first official shave (<em>depositio barbae</em>) marked a legal rite of passage into adulthood.</li>
+      <li><strong>Horizontal Partings:</strong> Build weight and stability; used for baselines and perimeter blunts.</li>
+      <li><strong>Vertical Partings:</strong> Remove weight and create flat, vertical planes; used for layering and graduation.</li>
+      <li><strong>Diagonal Forward / Back:</strong> Directs hair movement either toward or away from the face.</li>
+      <li><strong>Tension Dynamics:</strong> Wet hair stretches up to 40–50%. Use minimum-to-zero tension over cowlicks, ears, and receding hairlines to prevent cut-backs.</li>
     </ul>
 
-    <h3>2. The Barber-Surgeon Era & The Barber Pole</h3>
-    <p>Throughout Medieval Europe (1100s–1745), barbers performed bloodletting, wound cauterization, and teeth extraction alongside grooming. The rotating barber pole is a direct artifact of this surgical past:</p>
-    <ul>
-      <li><strong>Red Spiral:</strong> Arterial blood drawn during procedures.</li>
-      <li><strong>White Spiral:</strong> Clean linen bandages hung outside to dry.</li>
-      <li><strong>Blue Spiral:</strong> Venous blood (later incorporated in Anglo-American traditions).</li>
-      <li><strong>Brass Basin:</strong> The vessel used to hold drained blood during treatments.</li>
-    </ul>
+    <h3>3. Advanced Scissor Hair Shaping Techniques</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Cutting Technique</th><th>Mechanical Hand Execution</th><th>Strategic Objective</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Palm-to-Palm</strong></td><td>Shear blades parallel to the holding fingers with palms facing each other.</td><td>Prevents over-extension, maintains uniform tension on vertical lines.</td></tr>
+        <tr><td><strong>Point Cutting</strong></td><td>Tips of shears snip diagonally (30°–45°) into the hair ends.</td><td>Softens blunt lines, creates separation, blends layered transitions.</td></tr>
+        <tr><td><strong>Slide Cutting</strong></td><td>Shear blades held slightly open, gliding downward along hair shafts.</td><td>Removes bulk without reducing overall length; enhances movement.</td></tr>
+        <tr><td><strong>Scissor-Over-Comb</strong></td><td>Still shear blade rides along the comb spine moving continuously up.</td><td>Seamlessly blends the parietal ridge where clippers cannot reach.</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- CHAPTER 2: TOOLS -->
+  <!-- CHAPTER 2: MATERIALS, IMPLEMENTS & LEGEND TABLE -->
   <div class="chapter-card" id="ch2">
     <div class="chapter-header">
-      <h2>Chapter 2: Professional Equipment & Tool Anatomy</h2>
-      <span>Hardware Engineering, Calibration & Maintenance</span>
+      <h2>Chapter 2: Materials, Implements & Masterfile Inventory Legend</h2>
+      <span>Equipment Matrix & Category Classifications</span>
     </div>
+    <p>Every tool in the barbershop falls into either <strong>Retail</strong> (sold to clients) or <strong>Backbar</strong> (internal shop supplies) matching your Product Masterfile schema[cite: 2].</p>
 
-    <div class="img-showcase">
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Workstation">
-        <div class="img-caption">
-          <strong>Master Workstation Layout</strong>
-          <span>Sanitized station featuring immersion jars, shears, guards, and cordless motors.</span>
-        </div>
-      </div>
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Cordless Clippers">
-        <div class="img-caption">
-          <strong>Cordless Precision Clippers</strong>
-          <span>High-torque adjustable motor equipped with carbon-steel taper blades.</span>
-        </div>
-      </div>
-    </div>
-
-    <h3>The 5 Core Cutting Instruments</h3>
     <table class="data-table">
       <thead>
-        <tr><th>Tool Name</th><th>Primary Function</th><th>Standard Calibration / Specification</th></tr>
+        <tr><th>Implement / Material</th><th>Tool Category</th><th>Masterfile Classification</th><th>Primary Role & Hygiene Protocol</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Adjustable Clipper</strong></td><td>Debulking mass, blending baseline ladders, parietal integration.</td><td>Level Closed: 0.5 mm; Lever Half: 0.8 mm; Lever Open: 1.2 mm.</td></tr>
-        <tr><td><strong>Detailing Outliner</strong></td><td>Carving sharp guidelines, tracing C-cups, edging beards & nape.</td><td>Zero-gapped blade without overlap to prevent skin pinches.</td></tr>
-        <tr><td><strong>Dual-Foil Shaver</strong></td><td>Balding scalp down to absolute zero (0.0 mm) below baseline.</td><td>Counter-directional upward gliding; never push with heavy force.</td></tr>
-        <tr><td><strong>Cutting Shears (6.0")</strong></td><td>Blunt perimeter cuts, point texturing, scissor-over-comb.</td><td>Japanese convex stainless steel; fixed ring finger, moving thumb.</td></tr>
-        <tr><td><strong>Straight Razor (Shavette)</strong></td><td>Precision temple detailing, neckline cleanups, hot-towel razor shaves.</td><td>Single-use split safety blades ejected directly into Sharps disposal.</td></tr>
+        <tr><td><strong>Convex Shear (6.0"–6.5")</strong></td><td>Cutting Implement</td><td>Backbar (Durable Asset)</td><td>Primary scissor cutting and blunt lines. Disinfect with alcohol between clients.</td></tr>
+        <tr><td><strong>Thinning Shear (28–40T)</strong></td><td>Texturizing Implement</td><td>Backbar (Durable Asset)</td><td>Removes 20–30% bulk without shortening length. Balance screw regularly.</td></tr>
+        <tr><td><strong>Straight Razor (Shavette)</strong></td><td>Shaving Implement</td><td>Backbar (Durable Asset)</td><td>Lineups and shaves. Single-use split blades discarded in Sharps container.</td></tr>
+        <tr><td><strong>Taper & Carbon Combs</strong></td><td>Parting & Shaping</td><td>Backbar (Durable Asset)</td><td>Heat-resistant combs for clipper-over-comb. Submerge 10 min in Barbicide.</td></tr>
+        <tr><td><strong>Elastic Paper Neck Strip</strong></td><td>Sanitary Barrier</td><td>Backbar (Consumable)[cite: 2]</td><td>Single-use barrier preventing vinyl cape contact with client skin.</td></tr>
+        <tr><td><strong>Barber Cutting Cape</strong></td><td>Client Protection</td><td>Backbar (Linen Asset)</td><td>Water-repellent barrier. Wash daily; sanitize with disinfectant spray.</td></tr>
+        <tr><td><strong>Terry Cloth Towel</strong></td><td>Client Comfort</td><td>Backbar (Linen Asset)</td><td>Steam towels for hot shaves and basin drying. Launder at 60°C minimum.</td></tr>
+        <tr><td><strong>Sectioning Hair Grips</strong></td><td>Hair Control</td><td>Backbar (Durable Asset)</td><td>Holds top length clear of the horseshoe parting during side fading.</td></tr>
+        <tr><td><strong>Ionic Hair Dryer & Nozzle</strong></td><td>Styling Hardware</td><td>Backbar (Durable Asset)</td><td>Directs airflow root-to-tip. Clean lint filter every week.</td></tr>
+        <tr><td><strong>Vent & Round Brushes</strong></td><td>Volume Hardware</td><td>Backbar (Durable Asset)</td><td>Creates root lift and direction. Remove hair and submerge in Barbicide.</td></tr>
+        <tr><td><strong>Midnight Matte Clay</strong></td><td>Finishing Styling</td><td>Retail & Backbar[cite: 2]</td><td>Low-shine textured hold. Track reorder alerts when inventory dips below 5 units[cite: 2].</td></tr>
+        <tr><td><strong>Conditioning Beard Oil</strong></td><td>Facial Grooming</td><td>Retail & Backbar[cite: 2]</td><td>Cedarwood beard hydration. Track sales to calculate barber commissions[cite: 1, 2].</td></tr>
       </tbody>
     </table>
-
-    <div class="svg-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" width="100%" height="auto">
-        <line x1="40" y1="105" x2="560" y2="105" stroke="#d4af37" stroke-width="3"/>
-        <text x="40" y="130" fill="#d4af37" font-size="11" font-weight="bold">SKIN SURFACE (Stretched taut by non-dominant hand)</text>
-        <g transform="translate(160, 105) rotate(-30)">
-          <rect x="0" y="-7" width="120" height="14" rx="2" fill="#e2e8f0"/>
-          <rect x="115" y="-10" width="50" height="20" rx="3" fill="#d4af37"/>
-        </g>
-        <path d="M 210 105 A 45 45 0 0 0 200 83" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="3"/>
-        <text x="215" y="80" fill="#10b981" font-size="12" font-weight="bold">30° IDEAL CUTTING PLANE (Smooth, nick-free edge)</text>
-      </svg>
-    </div>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- CHAPTER 3: COSMETOLOGY VS BARBERING & HYGIENE (NEW MODULE) -->
+  <!-- CHAPTER 3: 4-VIEW HEAD ANATOMY -->
   <div class="chapter-card" id="ch3">
     <div class="chapter-header">
-      <h2>Chapter 3: Cosmetology vs. Barbering & Hygiene Practices</h2>
-      <span>Professional Scope, Infection Control & Ethics</span>
+      <h2>Chapter 3: Head Anatomy & Cranial Geography (4 Orthogonal Views)</h2>
+      <span>Architectural Planes, Transition Bones & Balance Zones</span>
     </div>
-    <p>While cosmetology and barbering share foundational grooming principles, their legal, technical, and chemical scopes differ significantly:</p>
-    
-    <table class="data-table">
-      <thead>
-        <tr><th>Discipline Category</th><th>Barbering Specialty</th><th>Cosmetology Specialty</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Core Philosophy</strong></td>
-          <td>Short hair architecture, skin fades, beard sculpting, traditional razor shaving.</td>
-          <td>Full-spectrum hair design, advanced coloring, chemical perms/relaxers, nails, skincare.</td>
-        </tr>
-        <tr>
-          <td><strong>Primary Cutting Medium</strong></td>
-          <td>High-torque clippers, foil balders, outliners, straight razors (shavettes).</td>
-          <td>Shears, texturizers, round brushes, thermal irons, color bowls.</td>
-        </tr>
-        <tr>
-          <td><strong>Facial Treatments</strong></td>
-          <td>Hot-towel straight-razor shaves, beard line-ups, temple contouring.</td>
-          <td>Facials, makeup application, brow waxing, aesthetic skincare.</td>
-        </tr>
-      </tbody>
-    </table>
+    <p>A precision haircut respects the client's cranial topography. Below are the 4 fundamental orthogonal reference views.</p>
 
-    <h3>Levels of Infection Control (Universal Shop Standard)</h3>
-    <ol>
-      <li><strong>Cleaning (Sanitation):</strong> Washing tools with warm water and detergent to remove hair, sebum, and dirt. <em>This does not kill bacteria or viruses.</em></li>
-      <li><strong>Disinfection:</strong> Complete immersion of non-porous tools in hospital-grade disinfectant (Barbicide mixed 1:16 with cold water) for <strong>10 uninterrupted minutes</strong>.</li>
-      <li><strong>Sterilization:</strong> Destroys all microbial life (autoclaves/high-heat steam). Rarely required in barbershops except when dealing with reusable medical-grade blades.</li>
-    </ol>
+    <div class="anatomy-grid">
+      <!-- SIDE VIEW -->
+      <div class="anatomy-card">
+        <h4 style="color:var(--accent-gold); margin-bottom:8px;">1. Side View (Profile)</h4>
+        <svg viewBox="0 0 260 260" width="100%" height="180">
+          <path d="M 60 210 C 60 170, 50 140, 50 110 C 50 50, 100 20, 160 20 C 220 20, 240 70, 240 120 C 240 160, 220 180, 200 190 C 190 200, 180 210, 180 210" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+          <path d="M 135 125 C 120 125, 115 145, 128 160 C 138 170, 150 150, 145 135 Z" fill="#181b24" stroke="#9ca3af" stroke-width="1.5"/>
+          <circle cx="160" cy="20" r="4" fill="#3b82f6"/><text x="170" y="24" fill="#60a5fa" font-size="8">Apex (Highest Point)</text>
+          <circle cx="110" cy="70" r="4" fill="#ef4444"/><text x="15" y="74" fill="#f87171" font-size="8">Parietal Ridge</text>
+          <circle cx="55" cy="135" r="4" fill="#10b981"/><text x="5" y="139" fill="#34d399" font-size="8">Occipital Bone</text>
+          <line x1="60" y1="200" x2="110" y2="200" stroke="#a855f7" stroke-width="2"/><text x="115" y="203" fill="#c084fc" font-size="8">Nape Perimeter</text>
+        </svg>
+      </div>
 
-    <div class="callout-box" style="border-left-color: var(--danger);">
-      <div class="callout-title" style="color: var(--danger);">Personal Hygiene & Practitioner Standards</div>
-      <p style="margin:0;">Barbers work within inches of client faces. Mandatory daily standards include: fresh uniform/barber apron, breath mints, clean trimmed nails, frequent hand washing, and immediate station sanitization between every client.</p>
+      <!-- FRONT VIEW -->
+      <div class="anatomy-card">
+        <h4 style="color:var(--accent-gold); margin-bottom:8px;">2. Front View (Facial Axis)</h4>
+        <svg viewBox="0 0 260 260" width="100%" height="180">
+          <path d="M 70 210 C 65 160, 60 90, 80 50 C 100 20, 160 20, 180 50 C 200 90, 195 160, 190 210 Z" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+          <line x1="60" y1="130" x2="70" y2="130" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="190" y1="130" x2="200" y2="130" stroke="#9ca3af" stroke-width="2"/>
+          <line x1="130" y1="20" x2="130" y2="220" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3"/>
+          <circle cx="85" cy="70" r="3" fill="#ef4444"/><text x="10" y="65" fill="#f87171" font-size="8">Frontal Recession</text>
+          <circle cx="175" cy="70" r="3" fill="#ef4444"/><text x="180" y="65" fill="#f87171" font-size="8">Temple Peak</text>
+          <line x1="75" y1="110" x2="185" y2="110" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2"/><text x="95" y="105" fill="#34d399" font-size="8">Eye / Cheek Plane</text>
+        </svg>
+      </div>
+
+      <!-- TOP VIEW -->
+      <div class="anatomy-card">
+        <h4 style="color:var(--accent-gold); margin-bottom:8px;">3. Top View (Crown & Parting)</h4>
+        <svg viewBox="0 0 260 260" width="100%" height="180">
+          <ellipse cx="130" cy="130" rx="75" ry="95" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+          <path d="M 90 70 Q 130 50 170 70 Q 190 130 170 180 Q 130 200 90 180 Q 70 130 90 70 Z" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4"/>
+          <text x="75" y="45" fill="#fbbf24" font-size="8">Horseshoe Perimeter Line</text>
+          <circle cx="130" cy="165" r="4" fill="#ef4444"/><text x="105" y="160" fill="#f87171" font-size="8">Crown Swirl</text>
+          <circle cx="130" cy="110" r="4" fill="#3b82f6"/><text x="110" y="105" fill="#60a5fa" font-size="8">Apex Point</text>
+        </svg>
+      </div>
+
+      <!-- BACK VIEW -->
+      <div class="anatomy-card">
+        <h4 style="color:var(--accent-gold); margin-bottom:8px;">4. Back View (Occipital & Nape)</h4>
+        <svg viewBox="0 0 260 260" width="100%" height="180">
+          <path d="M 75 220 L 75 190 C 60 160, 60 110, 80 50 C 100 20, 160 20, 180 50 C 200 110, 200 160, 185 190 L 185 220" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+          <circle cx="130" cy="120" r="4" fill="#10b981"/><text x="80" y="115" fill="#34d399" font-size="8">Occipital Bone Level</text>
+          <line x1="75" y1="180" x2="185" y2="180" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3"/><text x="95" y="175" fill="#fbbf24" font-size="8">Sub-Occipital Flat Zone</text>
+          <line x1="75" y1="215" x2="185" y2="215" stroke="#a855f7" stroke-width="2"/><text x="105" y="210" fill="#c084fc" font-size="8">Nape Hairline</text>
+        </svg>
+      </div>
     </div>
   </div>
 
-  <!-- CHAPTER 4: TRICHOLOGY & THE HAIR (NEW MODULE) -->
+  <!-- CHAPTER 4: DRAPING, WASH & BLOW DRYING -->
   <div class="chapter-card" id="ch4">
     <div class="chapter-header">
-      <h2>Chapter 4: Trichology: The Science of Hair & Scalp</h2>
-      <span>Anatomy, Growth Cycles & Pathology</span>
+      <h2>Chapter 4: Proper Draping, Shampooing & Ergonomic Blow Drying</h2>
+      <span>Client Care, Water Temperature & Tension Direction</span>
     </div>
-    <p>Trichology is the scientific study of hair and scalp. Understanding hair biology allows the barber to choose appropriate shear techniques, blade tension, and hair products.</p>
-
-    <h3>1. Anatomy of the Hair Shaft</h3>
-    <ul>
-      <li><strong>The Cuticle:</strong> The outermost protective layer consisting of scale-like, overlapping transparent cells (like shingles on a roof). Healthy cuticles reflect light, creating natural hair shine.</li>
-      <li><strong>The Cortex:</strong> The fibrous middle layer containing 90% of the hair's total weight. Contains melanin granules (hair color) and determines tensile elasticity and strength.</li>
-      <li><strong>The Medulla:</strong> The innermost core, present primarily in coarse, thick hair and often absent in fine textures.</li>
-    </ul>
-
-    <h3>2. The Three Hair Growth Phases</h3>
-    <table class="data-table">
-      <thead>
-        <tr><th>Phase Name</th><th>Stage Description</th><th>Duration & Impact on Haircuts</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>1. Anagen</strong></td><td>Active growing phase; hair cells divide rapidly in the bulb.</td><td>Lasts 2–7 years. Approx. 85–90% of scalp hair is in this stage.</td></tr>
-        <tr><td><strong>2. Catagen</strong></td><td>Brief transitional phase; follicle shrinks and detaches from papilla.</td><td>Lasts 1–2 weeks. Hair turns into a club hair.</td></tr>
-        <tr><td><strong>3. Telogen</strong></td><td>Resting phase; hair is naturally shed or pushed out by new anagen growth.</td><td>Lasts 2–4 months. Shedding 50–100 strands daily is normal.</td></tr>
-      </tbody>
-    </table>
-
-    <h3>3. Scalp Disorders: When to Cut vs. Refuse Service</h3>
-    <p>Never service a client showing signs of contagious or inflamed scalp conditions. Refer them to a physician:</p>
-    <ul>
-      <li><strong>Tinea Capitis (Ringworm of the Scalp):</strong> Red, scaly, circular patches with broken stubs of hair. <em>REFUSE SERVICE IMMEDIATELY.</em> Highly contagious fungal infection.</li>
-      <li><strong>Folliculitis Barbae:</strong> Bacterial infection of the beard/nape follicles resulting in inflamed, pus-filled pimples. Avoid straight-razor detailing across infected areas.</li>
-      <li><strong>Pityriasis (Dandruff):</strong> Excessive shedding of dry or greasy epidermal cells. Safe to cut; recommend clarifying zinc pyrithione shampoo.</li>
-      <li><strong>Alopecia Areata:</strong> Sudden, non-contagious circular bald spots caused by autoimmune factors. Safe to cut; adapt fade height to blend bald patches gracefully.</li>
-    </ul>
+    <ol>
+      <li><strong>Double-Towel Draping:</strong> Place the first towel around the neck, apply the cape over the towel (ensuring no cape plastic touches skin), and fold a second clean towel over the cape collar. For dry cuts, use an elastic paper neck strip pulled taut and folded outward.</li>
+      <li><strong>Shampoo Basin Mechanics:</strong> Test water on your inner wrist before touching the scalp. Use the finger pads (never fingernails) in circular motions, working from temples back to the occipital bone.</li>
+      <li><strong>Ergonomic Blow-Drying:</strong> Always point the airflow nozzle downward along the cuticle (from root to tip). Lift roots at 90° using a vent brush, apply warm heat to set structure, and lock in shape with a 5-second cold shot.</li>
+    </ol>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- CHAPTER 5: DRAPING, WASH & BLOW DRYING (NEW MODULE) -->
+  <!-- CHAPTER 5: FACE SHAPES & STYLING COMPATIBILITY -->
   <div class="chapter-card" id="ch5">
     <div class="chapter-header">
-      <h2>Chapter 5: Proper Draping, Shampooing & Ergonomic Blow Drying</h2>
-      <span>Client Comfort, Water Safety & Volume Styling</span>
+      <h2>Chapter 5: Face Shape Analysis & Hairstyle Compatibility</h2>
+      <span>Morphology, Silhouette Correction & Proportions</span>
     </div>
 
-    <div class="img-showcase">
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Wash & Prep">
-        <div class="img-caption">
-          <strong>Lathering & Shampoo Basin Discipline</strong>
-          <span>Precise finger pad massage and controlled water temperature verification.</span>
-        </div>
-      </div>
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Blow Drying">
-        <div class="img-caption">
-          <strong>Directional Airflow & Tension Styling</strong>
-          <span>Vent brush root lift paired with nozzle-focused warm air styling.</span>
-        </div>
-      </div>
-    </div>
-
-    <h3>1. The Double-Towel Draping Protocol</h3>
-    <ol>
-      <li>Position a clean terry cloth towel around the client's bare neck.</li>
-      <li>Fasten the waterproof chemical/cutting cape securely over the towel, ensuring no part of the cape touches the client's bare neck skin.</li>
-      <li>Drape a second clean towel over the cape to catch excess water dripping from the hair during washing.</li>
-      <li>For dry haircuts, replace the inner towel with an elastic paper neck strip pulled taut and folded outward over the cape collar.</li>
-    </ol>
-
-    <h3>2. Shampoo Basin Protocol & Scalp Massage</h3>
-    <ul>
-      <li><strong>Temperature Check:</strong> Always test water temperature against your inner wrist before touching the client's scalp.</li>
-      <li><strong>Application:</strong> Emulsify a nickel-sized amount of clarifying shampoo between palms; apply from hairline back to crown.</li>
-      <li><strong>Massage Mechanics:</strong> Use the <strong>pads of your fingers</strong> (never your fingernails) in firm, circular motions. Work from temples to occipital, increasing scalp blood flow.</li>
-    </ul>
-
-    <h3>3. The 3 Laws of Blow Drying Men's Hair</h3>
-    <ul>
-      <li><strong>Directional Airflow:</strong> Always point the dryer nozzle downward down the hair shaft (from root to tip). Blowing against the cuticle opens the hair scales, creating frizz.</li>
-      <li><strong>Tension Equals Control:</strong> Use a vented skeleton brush or round ceramic brush to pull hair taut at a 90° angle from the scalp to lock in maximum root volume.</li>
-      <li><strong>The Cool Shot Rule:</strong> Apply warm heat to mold hair into position, then hit the "Cool Shot" button for 5 seconds to lock the hydrogen bonds into place.</li>
-    </ul>
-  </div>
-
-  <!-- CHAPTER 6: HEAD GEOGRAPHY & BLENDING -->
-  <div class="chapter-card" id="ch6">
-    <div class="chapter-header">
-      <h2>Chapter 6: Head Geography & Fade Architecture</h2>
-      <span>Planes, Elevations & The Guard Ladder</span>
-    </div>
-
-    <div class="svg-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" width="100%" height="auto">
-        <path d="M 210 320 C 210 290, 190 250, 190 210 C 190 100, 270 40, 390 40 C 490 40, 540 100, 540 180 C 540 240, 520 270, 490 290 C 470 300, 460 320, 460 320" fill="none" stroke="#d4af37" stroke-width="3"/>
-        <path d="M 350 190 C 330 190, 325 220, 345 240 C 360 255, 375 225, 370 205 Z" fill="#181b24" stroke="#9ca3af" stroke-width="2"/>
-        <path d="M 260 110 Q 360 90 460 120" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="5"/>
-        <text x="475" y="120" fill="#fbbf24" font-size="11" font-weight="bold">HORSESHOE PARTING (Separates top from sides)</text>
-        <circle cx="320" cy="135" r="4" fill="#ef4444"/>
-        <text x="40" y="140" fill="#f87171" font-size="11" font-weight="bold">PARIETAL RIDGE (Weight crest & square shape)</text>
-        <path d="M 210 290 Q 280 280 360 280" fill="none" stroke="#a855f7" stroke-width="2.5"/>
-        <text x="375" y="285" fill="#c084fc" font-size="11" font-weight="bold">ZERO / SKIN BASELINE (Foil & trimmer line)</text>
-      </svg>
-    </div>
-
-    <h3>The Progressive Guard Blending Matrix</h3>
     <table class="data-table">
       <thead>
-        <tr><th>Guard</th><th>Length (mm)</th><th>Lever Setting</th><th>Strategic Architectural Role</th></tr>
+        <tr><th>Face Shape</th><th>Anatomical Identifiers</th><th>Best Hairstyle Match</th><th>Styles to Avoid</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Foil Shaver</strong></td><td>0.0 mm</td><td>Fixed Foil</td><td>Absolute scalp balding below the initial trimmer line.</td></tr>
-        <tr><td><strong>No Guard</strong></td><td>0.5 – 1.2 mm</td><td>Closed to Open</td><td>Erases the hard line created by outlining trimmers.</td></tr>
-        <tr><td><strong>#0.5 Guard</strong></td><td>1.5 – 2.5 mm</td><td>Lever Half</td><td>The transition bridge that softens dark weight lines.</td></tr>
-        <tr><td><strong>#1 Guard</strong></td><td>3.0 – 4.2 mm</td><td>Lever Closed/Open</td><td>Forms the visual mid-gradient body of the fade.</td></tr>
-        <tr><td><strong>#1.5 – #2</strong></td><td>4.5 – 6.0 mm</td><td>Lever Open</td><td>Debulks lower weight and connects cleanly into top shears.</td></tr>
+        <tr><td><strong>Oval</strong></td><td>Forehead slightly wider than rounded jawline; symmetrical profile.</td><td>Mid Skin Fade, Pompadour, Slick Back, Low Taper.</td><td>Heavy forward bangs that obscure the forehead.</td></tr>
+        <tr><td><strong>Square</strong></td><td>Strong, wide jaw with sharp angle; equal cheekbone width.</td><td>Classic Side Part, Buzz Cut, French Crop, High Taper.</td><td>Blunt, boxy fringes that over-accentuate jaw width.</td></tr>
+        <tr><td><strong>Round</strong></td><td>Cheekbones and face length are equal; soft, curved jaw.</td><td>High Skin Fade, Textured Pompadour, Spiky Crop with height.</td><td>Low tapers with wide side bulk; bowl cuts.</td></tr>
+        <tr><td><strong>Diamond</strong></td><td>Wide, sharp cheekbones with narrow forehead and pointed chin.</td><td>Textured French Crop, Flow Mullet, Scissor Side Part.</td><td>High bald fades that make temples look overly narrow.</td></tr>
+        <tr><td><strong>Oblong / Long</strong></td><td>Face length is noticeably greater than width; straight cheek line.</td><td>Low Taper Fade, Layered Scissor Cut, Side Part with volume.</td><td>Extreme vertical pompadours that lengthen the head.</td></tr>
+        <tr><td><strong>Heart</strong></td><td>Wide forehead and temple plane tapering to a narrow pointed chin.</td><td>Mid Taper, Textured Crop, Side Swept Fringe, Natural Beard.</td><td>Severe high buzz cuts that emphasize top-heavy balance.</td></tr>
       </tbody>
     </table>
   </div>
 
+  <!-- CHAPTER 6: STEP-BY-STEP TAPER MASTERCLASS -->
+  <div class="chapter-card" id="ch6">
+    <div class="chapter-header">
+      <h2>Chapter 6: Step-by-Step Taper Masterclass (Low, Mid & High)</h2>
+      <span>Fading Mechanics for Natural Edge-Ups</span>
+    </div>
+    <p>A taper fades hair down to the skin exclusively at the <strong>sideburns</strong> and the <strong>nape</strong>, preserving full weight and natural hairlines around the ear perimeters.</p>
+
+    <h3>Low Taper Execution Protocol</h3>
+    <ol>
+      <li><strong>Sideburn Baseline:</strong> Place detailing trimmer horizontally at the lower bottom of the sideburn (level with the earlobe). Create a 0.25-inch skin line.</li>
+      <li><strong>First Transition:</strong> Clipper lever open (no guard), cut upward 0.5 inches. Close lever to halfway and flick out the baseline.</li>
+      <li><strong>Guard Ladder:</strong> Attach #1 guard (lever open), cut upward another 0.5 inches. Attach #0.5 guard (lever halfway) to erase the remaining dark line.</li>
+      <li><strong>Nape Taper Baseline:</strong> Set a skin guideline across the bottom 0.5 inches of the neckline with trimmers. Foil-shave the lowest stubble.</li>
+      <li><strong>Nape Blending:</strong> Work upward using lever open &#8594; #0.5 guard &#8594; #1 guard &#8594; #2 guard, blending into the occipital bone weight.</li>
+      <li><strong>C-Cup Edge-Up:</strong> Stretch temple skin taut with the non-dominant thumb. Carve the C-cup curve using only the outer corner of the trimmer blade, finishing with a straight razor at 30°.</li>
+    </ol>
+  </div>
+
   <div class="page-break"></div>
 
-  <!-- CHAPTER 7: LOOKBOOK CATALOG -->
+  <!-- CHAPTER 7: 12-HAIRCUT LOOKBOOK & EXECUTIONS -->
   <div class="chapter-card" id="ch7">
     <div class="chapter-header">
-      <h2>Chapter 7: Visual Haircut Lookbook & Style Catalog</h2>
-      <span>12 Core Classic & Contemporary Haircut Blueprints</span>
+      <h2>Chapter 7: Visual Haircut Lookbook & Complete Step-by-Step Guides</h2>
+      <span>Technical Profiles & Guard Ladders</span>
     </div>
-    <p>A visual reference manual covering the exact mechanical parameters, guard ladders, and recommended styling products for today's most requested cuts.</p>
 
     <div class="catalog-grid">
-
       <!-- 1. LOW SKIN FADE -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=700&q=80" alt="Low Skin Fade">
-          <span class="haircut-tag">Core Modern</span>
+          <span class="haircut-tag">Modern Fade</span>
         </div>
         <div class="haircut-content">
           <h4>1. Low Skin Fade</h4>
-          <p class="haircut-desc">Skin transition stays close to the ear and drops low across the nape, preserving natural bulk above the occipital bone.</p>
+          <p class="haircut-desc">Skin transition drops low around the occipital bone, leaving dark density above.</p>
           <table class="spec-table">
             <tr><td>Baseline:</td><td>0.5" above ear & low nape</td></tr>
-            <tr><td>Guard Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #2</td></tr>
-            <tr><td>Best Face:</td><td>Oblong, Oval, Diamond</td></tr>
-            <tr><td>Product:</td><td>Matte Clay (Low Shine)</td></tr>
+            <tr><td>Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #2</td></tr>
+            <tr><td>Face Match:</td><td>Oblong, Oval, Diamond</td></tr>
+            <tr><td>Product:</td><td>Midnight Matte Clay[cite: 2]</td></tr>
           </table>
         </div>
       </div>
@@ -691,12 +604,12 @@
         </div>
         <div class="haircut-content">
           <h4>2. Low Taper Fade</h4>
-          <p class="haircut-desc">Fades down to bare skin solely at the sideburns and neckline corners while keeping the full perimeter bulk and natural hairline intact.</p>
+          <p class="haircut-desc">Skin fade isolated strictly to the sideburns and neckline corners.</p>
           <table class="spec-table">
             <tr><td>Baseline:</td><td>Sideburns & lower neck only</td></tr>
-            <tr><td>Guard Steps:</td><td>Trimmer &#8594; #0.5 &#8594; #1 &#8594; Bulk</td></tr>
-            <tr><td>Best Face:</td><td>All shapes / Professional</td></tr>
-            <tr><td>Product:</td><td>Styling Pomade (Natural)</td></tr>
+            <tr><td>Steps:</td><td>Trimmer &#8594; #0.5 &#8594; #1 &#8594; Comb</td></tr>
+            <tr><td>Face Match:</td><td>All face types / Professional</td></tr>
+            <tr><td>Product:</td><td>Classic Styling Pomade[cite: 2]</td></tr>
           </table>
         </div>
       </div>
@@ -709,12 +622,12 @@
         </div>
         <div class="haircut-content">
           <h4>3. Mid Skin Fade</h4>
-          <p class="haircut-desc">The industry standard fade starting 1 inch above the ear, offering high contrast with a clean transition into beard and parietal ridge.</p>
+          <p class="haircut-desc">Balanced fade line established 1 inch above the ear crossing the occipital bone.</p>
           <table class="spec-table">
             <tr><td>Baseline:</td><td>1" above ear & mid occipital</td></tr>
-            <tr><td>Guard Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #1.5</td></tr>
-            <tr><td>Best Face:</td><td>Square, Oval, Round</td></tr>
-            <tr><td>Product:</td><td>Midnight Matte Clay</td></tr>
+            <tr><td>Steps:</td><td>Foil &#8594; #0 &#8594; #0.5 &#8594; #1 &#8594; #1.5</td></tr>
+            <tr><td>Face Match:</td><td>Square, Oval, Round</td></tr>
+            <tr><td>Product:</td><td>Matte Clay & Beard Oil[cite: 2]</td></tr>
           </table>
         </div>
       </div>
@@ -727,30 +640,30 @@
         </div>
         <div class="haircut-content">
           <h4>4. High Skin Fade</h4>
-          <p class="haircut-desc">Blends to skin near the crown and upper temples, creating immediate maximum contrast with texturized length on top.</p>
+          <p class="haircut-desc">Fades up into the parietal ridge, accentuating height on top.</p>
           <table class="spec-table">
             <tr><td>Baseline:</td><td>Upper temple line</td></tr>
-            <tr><td>Guard Steps:</td><td>Foil &#8594; #0 Open &#8594; #1 &#8594; #1.5</td></tr>
-            <tr><td>Best Face:</td><td>Round, Square</td></tr>
-            <tr><td>Product:</td><td>Texture Powder / Paste</td></tr>
+            <tr><td>Steps:</td><td>Foil &#8594; #0 Open &#8594; #1 &#8594; #1.5</td></tr>
+            <tr><td>Face Match:</td><td>Round, Square</td></tr>
+            <tr><td>Product:</td><td>Texture Dust Powder[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 5. BUZZ CUT -->
+      <!-- 5. PRECISION BUZZ CUT -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
-          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Precision Buzz Cut">
-          <span class="haircut-tag">Ultra Low Maintenance</span>
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Buzz Cut">
+          <span class="haircut-tag">Low Maintenance</span>
         </div>
         <div class="haircut-content">
           <h4>5. Precision Buzz Cut</h4>
-          <p class="haircut-desc">Uniform short clippered length on top (#2 or #3 guard) paired with a tight skin fade and laser-straight razor line-up.</p>
+          <p class="haircut-desc">Even length on top (#2 or #3 guard) paired with clean skin-faded perimeters.</p>
           <table class="spec-table">
-            <tr><td>Top Length:</td><td>#2 or #3 Guard (6–10mm)</td></tr>
+            <tr><td>Top:</td><td>#2 or #3 Guard against grain</td></tr>
             <tr><td>Sides:</td><td>Mid or High Skin Fade</td></tr>
-            <tr><td>Best Face:</td><td>Square, Oval, Chiseled Jaw</td></tr>
-            <tr><td>Product:</td><td>Beard Oil / Scalp Moisturizer</td></tr>
+            <tr><td>Face Match:</td><td>Square, Oval, Defined Jaw</td></tr>
+            <tr><td>Product:</td><td>Beard Oil / Scalp Cream[cite: 2]</td></tr>
           </table>
         </div>
       </div>
@@ -759,16 +672,16 @@
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt="Modern Mullet">
-          <span class="haircut-tag">Contemporary Street</span>
+          <span class="haircut-tag">Street Style</span>
         </div>
         <div class="haircut-content">
           <h4>6. Modern Mullet</h4>
-          <p class="haircut-desc">Tapered or burst faded sides with clean temple lines, maintaining textured length flowing down the nape of the neck.</p>
+          <p class="haircut-desc">Clean temple tapers paired with disconnected, flowing lengths down the nape.</p>
           <table class="spec-table">
             <tr><td>Sides:</td><td>Low Temple Taper / Burst</td></tr>
-            <tr><td>Back:</td><td>3–6" Scissor Layered Bulk</td></tr>
-            <tr><td>Best Face:</td><td>Diamond, Oval, Heart</td></tr>
-            <tr><td>Product:</td><td>Sea Salt Spray & Cream</td></tr>
+            <tr><td>Back:</td><td>3–6" Scissor Layers</td></tr>
+            <tr><td>Face Match:</td><td>Diamond, Oval, Heart</td></tr>
+            <tr><td>Product:</td><td>Sea Salt Spray & Cream[cite: 2]</td></tr>
           </table>
         </div>
       </div>
@@ -777,57 +690,57 @@
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Textured French Crop">
-          <span class="haircut-tag">European Street</span>
+          <span class="haircut-tag">European Crop</span>
         </div>
         <div class="haircut-content">
           <h4>7. Textured French Crop</h4>
-          <p class="haircut-desc">Forward-falling top cut with heavy point-texturing, finished with a blunt or textured horizontal fringe across the forehead.</p>
+          <p class="haircut-desc">Forward-directed top with point cutting and a clean blunt horizontal fringe.</p>
           <table class="spec-table">
             <tr><td>Sides:</td><td>High or Drop Skin Fade</td></tr>
             <tr><td>Top:</td><td>Deep Point-Cut Texture</td></tr>
-            <tr><td>Best Face:</td><td>Oval, Oblong, Diamond</td></tr>
-            <tr><td>Product:</td><td>Volumizing Matte Powder</td></tr>
+            <tr><td>Face Match:</td><td>Oval, Oblong, Diamond</td></tr>
+            <tr><td>Product:</td><td>Matte Volumizing Dust[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 8. BURST FADE -->
+      <!-- 8. THE BURST FADE -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Burst Fade">
-          <span class="haircut-tag">Athletic Favorite</span>
+          <span class="haircut-tag">Athletic Style</span>
         </div>
         <div class="haircut-content">
           <h4>8. The Burst Fade</h4>
-          <p class="haircut-desc">A circular fade curving tightly around the ear, preserving natural hair bulk behind the occipital bone and down the neck.</p>
+          <p class="haircut-desc">Circular fade pattern contouring around the ear, preserving rear bulk.</p>
           <table class="spec-table">
             <tr><td>Baseline:</td><td>Curved radius around ear</td></tr>
-            <tr><td>Guard Steps:</td><td>Foil &#8594; #0 &#8594; #1 &#8594; Shear Blend</td></tr>
-            <tr><td>Best Face:</td><td>Oval, Round, Square</td></tr>
-            <tr><td>Product:</td><td>Curl Cream / Matte Paste</td></tr>
+            <tr><td>Steps:</td><td>Foil &#8594; #0 &#8594; #1 &#8594; Shear Comb</td></tr>
+            <tr><td>Face Match:</td><td>Oval, Round, Square</td></tr>
+            <tr><td>Product:</td><td>Curl Enhancer / Matte Paste[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 9. CLASSIC SIDE PART -->
+      <!-- 9. EXECUTIVE SIDE PART -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=700&q=80" alt="Executive Side Part">
-          <span class="haircut-tag">Executive Vintage</span>
+          <span class="haircut-tag">Vintage Classic</span>
         </div>
         <div class="haircut-content">
           <h4>9. Executive Side Part</h4>
-          <p class="haircut-desc">Clean razor parting line aligned with the eyebrow recession point, with scissor-tapered sides and a neat gentleman's comb-over.</p>
+          <p class="haircut-desc">Clean razor part aligned with the recession line, blended into tapered sides.</p>
           <table class="spec-table">
-            <tr><td>Sides:</td><td>#2 Guard Taper / Low Fade</td></tr>
+            <tr><td>Sides:</td><td>#2 Taper down to #1 at ears</td></tr>
             <tr><td>Top:</td><td>Scissor Over Comb (3–4")</td></tr>
-            <tr><td>Best Face:</td><td>Square, Oval, Professional</td></tr>
-            <tr><td>Product:</td><td>High Shine Water Pomade</td></tr>
+            <tr><td>Face Match:</td><td>Square, Oval, Professional</td></tr>
+            <tr><td>Product:</td><td>High Shine Pomade[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 10. POMPADOUR -->
+      <!-- 10. THE POMPADOUR -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80" alt="Pompadour">
@@ -835,17 +748,17 @@
         </div>
         <div class="haircut-content">
           <h4>10. The Pompadour</h4>
-          <p class="haircut-desc">High volume swept up and back from the forehead with low-to-mid tapered temples, adding vertical height to the face.</p>
+          <p class="haircut-desc">Front fringe brushed up and back, building vertical height from the forehead.</p>
           <table class="spec-table">
             <tr><td>Fringe:</td><td>4–6" Front Length Minimum</td></tr>
             <tr><td>Blowdry:</td><td>Round brush root lift</td></tr>
-            <tr><td>Best Face:</td><td>Round, Square (Adds Height)</td></tr>
-            <tr><td>Product:</td><td>Heavy Hold Pomade / Clay</td></tr>
+            <tr><td>Face Match:</td><td>Round, Square</td></tr>
+            <tr><td>Product:</td><td>Firm Hold Heavy Pomade[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 11. EDGAR CUT -->
+      <!-- 11. THE EDGAR CUT -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=700&q=80" alt="Edgar Cut">
@@ -853,160 +766,110 @@
         </div>
         <div class="haircut-content">
           <h4>11. The Edgar Cut</h4>
-          <p class="haircut-desc">A sharp straight-across blunt fringe with high skin-tapered sides, popular across modern youth and street culture.</p>
+          <p class="haircut-desc">Straight horizontal blunt fringe with high-contrast tapered or drop-faded sides.</p>
           <table class="spec-table">
-            <tr><td>Fringe:</td><td>Blunt horizontal razor line</td></tr>
+            <tr><td>Fringe:</td><td>Blunt straight line across</td></tr>
             <tr><td>Sides:</td><td>High Taper or Drop Fade</td></tr>
-            <tr><td>Best Face:</td><td>Oval, Oblong, Long Faces</td></tr>
-            <tr><td>Product:</td><td>Matte Styling Powder</td></tr>
+            <tr><td>Face Match:</td><td>Oval, Oblong, Long Face</td></tr>
+            <tr><td>Product:</td><td>Matte Styling Powder[cite: 2]</td></tr>
           </table>
         </div>
       </div>
 
-      <!-- 12. SLICK BACK -->
+      <!-- 12. CLASSIC SLICK BACK -->
       <div class="haircut-card">
         <div class="haircut-img-wrap">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Classic Slick Back">
-          <span class="haircut-tag">Timeless Grooming</span>
+          <span class="haircut-tag">Clean Disciplined</span>
         </div>
         <div class="haircut-content">
           <h4>12. Classic Slick Back</h4>
-          <p class="haircut-desc">All top hair combed straight back flat to the crown, paired with an undercut or mid fade for a strong, disciplined look.</p>
+          <p class="haircut-desc">All top hair combed straight back flat toward the crown, paired with tight sides.</p>
           <table class="spec-table">
-            <tr><td>Top:</td><td>4–5" Uniform Directional Length</td></tr>
+            <tr><td>Top:</td><td>4–5" Straight Back Direction</td></tr>
             <tr><td>Sides:</td><td>Mid Fade or Undercut</td></tr>
-            <tr><td>Best Face:</td><td>Oval, Square, Strong Jaw</td></tr>
-            <tr><td>Product:</td><td>Medium-Shine Classic Pomade</td></tr>
+            <tr><td>Face Match:</td><td>Oval, Square, Strong Jaw</td></tr>
+            <tr><td>Product:</td><td>Medium Shine Pomade[cite: 2]</td></tr>
           </table>
         </div>
       </div>
-
     </div>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- CHAPTER 8: FACE SHAPES -->
+  <!-- CHAPTER 8: EQUIPMENT MAINTENANCE PROTOCOLS -->
   <div class="chapter-card" id="ch8">
     <div class="chapter-header">
-      <h2>Chapter 8: Face Shape Analysis & Style Compatibility</h2>
-      <span>Morphology, Silhouette Balance & Proportions</span>
+      <h2>Chapter 8: Maintenance & Care of Shears, Clippers & Razors</h2>
+      <span>Sanitation, Zero-Gapping & Lubrication Science</span>
     </div>
-    <p>A master barber sculpts a silhouette suited to the client's bone structure, aiming to bring any head shape closer to the ideal: the <strong>Square / Oval silhouette</strong>.</p>
 
-    <table class="data-table">
-      <thead>
-        <tr><th>Face Shape</th><th>Structural Characteristics</th><th>Recommended Styles</th><th>Techniques to Avoid</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Square</strong></td>
-          <td>Sharp, wide jawline; equal forehead and cheekbone width.</td>
-          <td>Classic Side Part, High Taper, Textured Crop, Buzz Cut.</td>
-          <td>Overly flat, blunt fringes that make the face look boxy.</td>
-        </tr>
-        <tr>
-          <td><strong>Oval</strong></td>
-          <td>Forehead slightly wider than rounded jaw; balanced proportions.</td>
-          <td>Mid Skin Fade, Pompadour, Slick Back, Tapers.</td>
-          <td>Full fringe covering the forehead; avoid round silhouettes.</td>
-        </tr>
-        <tr>
-          <td><strong>Round</strong></td>
-          <td>Equal face length and width; soft, curved jawline.</td>
-          <td>High Skin Fade, Textured Spikes, Pompadour with root lift.</td>
-          <td>Low Tapers with side bulk; rounded fringes that shorten the face.</td>
-        </tr>
-        <tr>
-          <td><strong>Diamond</strong></td>
-          <td>Narrow forehead and jawline; wide, prominent cheekbones.</td>
-          <td>Textured French Crop, Scissor Cut with side volume, Beard blends.</td>
-          <td>High skin fades that expose narrow temples too aggressively.</td>
-        </tr>
-        <tr>
-          <td><strong>Oblong / Long</strong></td>
-          <td>Face is noticeably longer than it is wide; flat cheeks.</td>
-          <td>Low Taper, Classic Side Part, Moderate side volume.</td>
-          <td>Extreme vertical height (e.g., tall pompadours) that stretches the face.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- CHAPTER 9: CONSULTATION & MASTERFILES -->
-  <div class="chapter-card" id="ch9">
-    <div class="chapter-header">
-      <h2>Chapter 9: Client Consultation & Retail Psychology</h2>
-      <span>Communication, Retention & Shop Operations</span>
-    </div>
-    <p>A great haircut begins before the cape is touched. Master barbers run an intentional consultation to manage client expectations and maximize lifetime retention.</p>
-
-    <h3>The 4-Step Consultation Framework</h3>
+    <h3>1. Daily Scissor Maintenance Protocol</h3>
     <ol>
-      <li><strong>Diagnosis:</strong> Assess face shape, hair density, growth direction (cowlicks/crown swirls), and hairline recession points.</li>
-      <li><strong>Lifestyle Questioning:</strong> Ask: <em>"How much time do you spend styling your hair each morning?"</em> and <em>"How often do you like to get a haircut (weekly, bi-weekly, monthly)?"</em></li>
-      <li><strong>Realistic Recommendation:</strong> Advise on the optimal haircut silhouette and explain why it fits their face shape and routine.</li>
-      <li><strong>Confirmation:</strong> Confirm the agreed baseline height and fringe length before turning on clippers.</li>
+      <li><strong>Cleaning:</strong> At the end of each shift, wipe blades thoroughly using a soft microfiber cloth with 70% isopropyl alcohol to remove hair, styling chemicals, and moisture.</li>
+      <li><strong>Tension Adjustment:</strong> Hold the shears by the finger ring vertically. Lift the thumb ring to 90° and let it drop. If it drops completely shut, it is too loose. If it stays completely open, it is too tight. It should stop smoothly at approximately 45°.</li>
+      <li><strong>Oiling the Pivot:</strong> Place one small drop of shear oil directly into the pivot screw point daily. Open and close the shears several times to disperse the oil and wipe away excess.</li>
     </ol>
 
-    <div class="callout-box" style="border-left-color: var(--success); background: rgba(16, 185, 129, 0.08);">
-      <div class="callout-title" style="color: var(--success);">Retail Upselling & Shop Masterfile Integration</div>
-      <p style="margin:0;">Always explain which product you are using (e.g., <strong>Midnight Matte Clay</strong> for low shine, or <strong>Cedarwood Conditioning Beard Oil</strong> for hydration). Log purchases into the <strong>Product Masterfile</strong> at checkout to ensure the shop tracks commission splits and updates inventory levels[cite: 1, 2]!</p>
+    <h3>2. Clipper Maintenance & The 3-Drop Rule</h3>
+    <p>Always brush out hair from the blade teeth after every service. Apply <strong>three drops of clipper oil</strong> across the cutting teeth and one drop on each rear rail heel before and after every client. Test blade temperature against your inner wrist every 10 minutes to protect clients from thermal discomfort.</p>
+
+    <h3>3. Clipper Zero-Gapping Step-by-Step</h3>
+    <ol>
+      <li>Loosen the two screws on the still blade by half a turn.</li>
+      <li>Slide the moving blade upward until its teeth sit <strong>0.1 mm to 0.5 mm</strong> behind the still blade edge.</li>
+      <li><strong>SAFETY RULE:</strong> The moving blade must never extend past the still blade. An overlapping moving blade will pinch and cut the client's skin.</li>
+      <li>Tighten the screws evenly while holding the blades parallel against a flat surface.</li>
+    </ol>
+  </div>
+
+  <!-- CHAPTER 9: LAUNCHING A BARBERSHOP & MASTERFILE INTEGRATION -->
+  <div class="chapter-card" id="ch9">
+    <div class="chapter-header">
+      <h2>Chapter 9: Launching a Barbershop & Operations Infrastructure</h2>
+      <span>Physical Ergonomics, Philippine Permits & Operational Databases</span>
     </div>
+    <p>Opening a barbershop requires structured spatial planning, local legal registration, and connected digital masterfiles to manage staff commissions, booking schedules, and inventory[cite: 1, 2].</p>
+
+    <h3>1. Station Dimensions & Physical Layout</h3>
+    <ul>
+      <li><strong>Chair Clearance:</strong> Maintain a minimum of 4.5 to 5 linear feet between the centers of each barber chair.</li>
+      <li><strong>Working Radius:</strong> Keep at least 4 to 5 feet of clear space behind each chair to allow the barber to navigate comfortably.</li>
+      <li><strong>Mirror Lighting:</strong> Install diffuse 4000K–5000K daylight-balanced LED lighting at eye level on both sides of the mirror to eliminate shadows around the client's neck and ears.</li>
+    </ul>
+
+    <h3>2. Philippine Business Compliance Checklist</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Step / Permit</th><th>Issuing Agency</th><th>Operational Requirement</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1. Trade Name Registration</strong></td><td>DTI (Sole Proprietorship) or SEC (Corp)</td><td>Registers and protects the brand name (e.g., <em>Wilsons Midnight Barbers</em>).</td></tr>
+        <tr><td><strong>2. Barangay Business Clearance</strong></td><td>Local Barangay Hall</td><td>Authorizes commercial operations within the local barangay jurisdiction.</td></tr>
+        <tr><td><strong>3. Mayor's / Business Permit</strong></td><td>City / Municipal Hall (BPLO)</td><td>Annual operating license; requires fire safety, building, and electrical clearances.</td></tr>
+        <tr><td><strong>4. BIR Registration (Form 2303)</strong></td><td>Bureau of Internal Revenue</td><td>Certificate of Registration, printing of Official Receipts (OR), and POS registration[cite: 2].</td></tr>
+        <tr><td><strong>5. Sanitation Permit & Health Cards</strong></td><td>City Health Office</td><td>Annual sanitary inspection and health cards (chest X-ray, stool exam) for all barbers.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3. Operational Databases (The Three Core Masterfiles)</h3>
+    <ol>
+      <li><strong>Employee Masterfile:</strong> Contains staff contact information, hiring records, and commission split percentages[cite: 2]. Links directly to Daily Time Records (DTR) and automated payroll math[cite: 1, 2].</li>
+      <li><strong>Service Masterfile:</strong> Sets standardized service prices, point values, and duration intervals (e.g., Fade = 45 min, Hot Towel = 30 min) to prevent scheduling overlaps[cite: 2].</li>
+      <li><strong>Product Masterfile:</strong> Distinguishes <strong>Retail</strong> inventory from <strong>Backbar</strong> shop supplies[cite: 2]. Automatically updates stock counts and triggers reorder warnings when counts drop below thresholds[cite: 1, 2].</li>
+    </ol>
   </div>
 
   <div class="page-break"></div>
 
-  <!-- CHAPTER 10: LAUNCHING A BARBERSHOP (NEW MODULE) -->
+  <!-- CHAPTER 10: PRACTICAL RUBRIC -->
   <div class="chapter-card" id="ch10">
     <div class="chapter-header">
-      <h2>Chapter 10: How to Launch Your Own Barbershop (Business Blueprint)</h2>
-      <span>Step-by-Step Setup, Philippine Compliance & Operational Math</span>
-    </div>
-    <p>Transitioning from an employed master barber to a shop owner requires a disciplined approach to physical layout, legal compliance, and digital infrastructure[cite: 2].</p>
-
-    <h3>Phase 1: Location Scouting & Station Layout</h3>
-    <ul>
-      <li><strong>Foot Traffic vs. Parking:</strong> A great barbershop needs either high pedestrian foot traffic (malls/commercial hubs) or dedicated, hassle-free parking for appointments[cite: 2].</li>
-      <li><strong>Station Ergonomics:</strong> Allocate a minimum of <strong>4.5 to 5 linear feet per barber chair</strong> and at least 4 feet behind the chair so the barber can navigate comfortably around the client.</li>
-      <li><strong>Plumbing & Backwash:</strong> Position shampoo backwash sinks near water supply lines and grease/hair traps to prevent plumbing blockages.</li>
-    </ul>
-
-    <h3>Phase 2: Philippine Legal Compliance Checklist</h3>
-    <table class="data-table">
-      <thead>
-        <tr><th>Step / Permit</th><th>Issuing Agency</th><th>Purpose / Description</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>1. Business Name Registration</strong></td><td>DTI (Sole Proprietorship) or SEC (Corporation)</td><td>Protects your trade name (e.g., <em>Wilsons Midnight Barbers</em>).</td></tr>
-        <tr><td><strong>2. Barangay Business Clearance</strong></td><td>Local Barangay Hall</td><td>Certifies commercial activity compliance within the barangay.</td></tr>
-        <tr><td><strong>3. Mayor's / Business Permit</strong></td><td>City / Municipal Hall (BPLO)</td><td>Operational license; requires fire safety and sanitary inspections.</td></tr>
-        <tr><td><strong>4. BIR Tax Registration (Form 2303)</strong></td><td>Bureau of Internal Revenue</td><td>Certificate of Registration, Official Receipts (OR), and POS registration[cite: 2].</td></tr>
-        <tr><td><strong>5. Sanitation Permit & Health Cards</strong></td><td>City Health Office</td><td>Mandatory blood test and chest X-ray health cards for all barbers.</td></tr>
-      </tbody>
-    </table>
-
-    <h3>Phase 3: Operational Infrastructure (The 3 Foundation Masterfiles)</h3>
-    <p>Before welcoming your first walk-in, set up the following operational databases:</p>
-    <ol>
-      <li><strong>Employee Masterfile:</strong> Record staff contact info, hire dates, and <strong>commission split percentages</strong> (e.g., 60/40 or 50/50)[cite: 1]. Ties into Daily Time Records (DTR) and automated payroll math[cite: 1].</li>
-      <li><strong>Service Masterfile:</strong> Define standard service durations (e.g., Fade = 45 min, Hot Towel = 30 min) and retail prices to prevent double-booking on your schedule[cite: 1].</li>
-      <li><strong>Product Masterfile:</strong> Categorize inventory into <strong>Retail</strong> (sold to clients) and <strong>Backbar</strong> (internal shop use like Barbicide, neck strips, and talc). Establish minimum reorder thresholds to prevent stockouts[cite: 1].</li>
-    </ol>
-
-    <div class="callout-box" style="border-left-color: var(--info);">
-      <div class="callout-title" style="color: var(--info);">Operating Reserves Rule</div>
-      <p style="margin:0;">Always maintain a minimum cash buffer equal to <strong>3 to 6 months of fixed overhead</strong> (commercial rent, electricity, Wi-Fi, base salaries, and local permits) before opening your doors.</p>
-    </div>
-  </div>
-
-  <!-- CHAPTER 11: RUBRIC -->
-  <div class="chapter-card" id="ch11">
-    <div class="chapter-header">
-      <h2>Chapter 11: Practical Examination Rubric & Certification</h2>
+      <h2>Chapter 10: Practical Examination Rubric & Certification</h2>
       <span>100-Point Day 3 Live Model Evaluation</span>
     </div>
-    <p>To graduate and earn the Academy Certificate of Completion, trainees must achieve a <strong>minimum score of 75 points</strong> across five core competencies during their Day 3 practical exam.</p>
+    <p>To graduate and receive the official Academy Certificate of Completion, trainees must achieve a <strong>minimum score of 75 points</strong> across five technical competencies during their Day 3 live model exam.</p>
 
     <table class="data-table">
       <thead>
