@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilsons Midnight Barbers Academy - Trainee Training Manual</title>
+<title>Wilsons Midnight Barbers Academy - Master Training Manual</title>
 <style>
   :root {
     --bg-dark: #0f1117;
@@ -34,11 +34,11 @@
   }
 
   .manual-wrapper {
-    max-width: 1040px;
+    max-width: 1060px;
     margin: 0 auto;
   }
 
-  /* Header */
+  /* Header Banner */
   .hero-banner {
     background: #12151d;
     border: 2px solid var(--accent-gold);
@@ -84,6 +84,7 @@
     border-radius: 8px;
     padding: 8px;
     margin-bottom: 20px;
+    scrollbar-width: thin;
   }
 
   .tab-btn {
@@ -377,7 +378,7 @@
     text-align: center;
   }
 
-  /* Bottom Next/Back */
+  /* Bottom Navigation */
   .lesson-nav-footer {
     display: flex;
     justify-content: space-between;
@@ -409,7 +410,7 @@
     cursor: not-allowed;
   }
 
-  /* ================= PRINT & PDF OPTIMIZATION ================= */
+  /* Print & PDF Engine */
   @media print {
     @page {
       size: A4 portrait;
@@ -429,7 +430,6 @@
       margin: 0 !important;
     }
 
-    /* 1. Unhide ALL lessons so complete manual prints */
     .lesson-pane {
       display: block !important;
       visibility: visible !important;
@@ -444,14 +444,12 @@
       break-before: avoid;
     }
 
-    /* 2. Hide interactive browser elements */
     .tab-nav, 
     .lesson-nav-footer, 
     .no-print {
       display: none !important;
     }
 
-    /* 3. Colors and Card Borders */
     .hero-banner {
       background: #ffffff !important;
       border: 2px solid #000000 !important;
@@ -484,7 +482,6 @@
       border-bottom: 2px solid #000000 !important;
     }
 
-    /* 4. Prevent item splits across page breaks */
     .tool-card,
     .haircut-card,
     .callout-box,
@@ -558,9 +555,9 @@
   <!-- TOP HEADER -->
   <div class="hero-banner">
     <div>
-      <span class="hero-tag">Beginner Friendly Manual</span>
+      <span class="hero-tag">Beginner Friendly Academy</span>
       <h1 class="hero-title">Wilsons Barber Academy</h1>
-      <div class="hero-sub">Step-by-Step Training Manual: Tools, Techniques, Fades & Haircuts</div>
+      <div class="hero-sub">Complete Training Manual: Tools, Fades, Men's & Women's Haircut Blueprints</div>
     </div>
     <div class="no-print">
       <button onclick="window.print()" style="background:var(--accent-gold); color:#000; border:none; padding:8px 14px; border-radius:6px; font-weight:bold; cursor:pointer; font-size:8.5pt;">
@@ -571,14 +568,15 @@
 
   <!-- INTERACTIVE CHAPTER TABS -->
   <div class="tab-nav no-print" id="tabNav">
-    <button class="tab-btn active" onclick="switchLesson(1)">1. Barber Supplies & Tools</button>
+    <button class="tab-btn active" onclick="switchLesson(1)">1. Barber Supplies</button>
     <button class="tab-btn" onclick="switchLesson(2)">2. Cleanliness & Safety</button>
     <button class="tab-btn" onclick="switchLesson(3)">3. Parts of the Head</button>
-    <button class="tab-btn" onclick="switchLesson(4)">4. Washing & Blow-Drying</button>
+    <button class="tab-btn" onclick="switchLesson(4)">4. Washing & Drying</button>
     <button class="tab-btn" onclick="switchLesson(5)">5. Face Shapes Guide</button>
     <button class="tab-btn" onclick="switchLesson(6)">6. How to do a Taper</button>
-    <button class="tab-btn" onclick="switchLesson(7)">7. Haircut Lookbook & Steps</button>
-    <button class="tab-btn" onclick="switchLesson(8)">8. Tool Care & Setup</button>
+    <button class="tab-btn" onclick="switchLesson(7)">7. Men's Haircuts (12 Styles)</button>
+    <button class="tab-btn" onclick="switchLesson(8)">8. Women's Haircuts (6 Styles)</button>
+    <button class="tab-btn" onclick="switchLesson(9)">9. Tool Care & Setup</button>
   </div>
 
   <!-- ================= LESSON 1: BARBER SUPPLIES ================= -->
@@ -586,7 +584,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 1: Barber Tools and Supplies</h2>
-        <span>Lesson 1 of 8</span>
+        <span>Lesson 1 of 9</span>
       </div>
       <p>Before cutting hair, you must know what each tool does. Below are the basic tools you will use every day in the shop.</p>
 
@@ -656,7 +654,7 @@
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" disabled>← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 1 of 8</span>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 1 of 9</span>
         <button class="nav-btn" onclick="switchLesson(2)">Next: Cleanliness & Safety →</button>
       </div>
     </div>
@@ -667,7 +665,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 2: Cleanliness, Hygiene & Safety</h2>
-        <span>Lesson 2 of 8</span>
+        <span>Lesson 2 of 9</span>
       </div>
       <p>Clean tools prevent scalp infections, dandruff, and pimples from spreading from one client to another.</p>
 
@@ -685,7 +683,7 @@
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(1)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 2 of 8</span>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 2 of 9</span>
         <button class="nav-btn" onclick="switchLesson(3)">Next: Parts of the Head →</button>
       </div>
     </div>
@@ -696,7 +694,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 3: The 4 Main Parts of the Head</h2>
-        <span>Lesson 3 of 8</span>
+        <span>Lesson 3 of 9</span>
       </div>
       <p>To talk with your trainer and follow haircut steps, you must know where these 4 main areas are on every client's head.</p>
 
@@ -722,7 +720,7 @@
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(2)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 3 of 8</span>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 3 of 9</span>
         <button class="nav-btn" onclick="switchLesson(4)">Next: Washing & Drying →</button>
       </div>
     </div>
@@ -733,7 +731,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 4: How to Shampoo and Blow-Dry</h2>
-        <span>Lesson 4 of 8</span>
+        <span>Lesson 4 of 9</span>
       </div>
       
       <h3>Step-by-Step Hair Wash:</h3>
@@ -752,7 +750,7 @@
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(3)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 4 of 8</span>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 4 of 9</span>
         <button class="nav-btn" onclick="switchLesson(5)">Next: Face Shapes Guide →</button>
       </div>
     </div>
@@ -763,7 +761,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 5: Choosing the Right Cut for Every Face Shape</h2>
-        <span>Lesson 5 of 8</span>
+        <span>Lesson 5 of 9</span>
       </div>
       <p>Different clients have different face shapes. A good barber gives a haircut that makes the face look balanced.</p>
 
@@ -772,17 +770,17 @@
           <tr><th>Face Shape</th><th>What It Looks Like</th><th>Best Haircuts to Choose</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Oval</strong></td><td>Balanced, smooth jawline.</td><td>Almost any haircut (Skin Fade, Pompadour, Taper).</td></tr>
-          <tr><td><strong>Square</strong></td><td>Wide, strong jaw and forehead.</td><td>Buzz Cut, Side Part, French Crop.</td></tr>
-          <tr><td><strong>Round</strong></td><td>Cheeks and face length are the same.</td><td>High Skin Fade, Spiky Hair, Pompadour (adds height).</td></tr>
-          <tr><td><strong>Long (Oblong)</strong></td><td>Face is tall and narrow.</td><td>Low Taper, Scissor Cut (keep some hair on the sides).</td></tr>
-          <tr><td><strong>Diamond</strong></td><td>Pointy chin and wide cheekbones.</td><td>Textured Crop, Mullet, Side Part.</td></tr>
+          <tr><td><strong>Oval</strong></td><td>Balanced, smooth jawline.</td><td>Almost any haircut (Skin Fade, Pompadour, Taper, Bob).</td></tr>
+          <tr><td><strong>Square</strong></td><td>Wide, strong jaw and forehead.</td><td>Buzz Cut, Side Part, French Crop, Long Soft Layers.</td></tr>
+          <tr><td><strong>Round</strong></td><td>Cheeks and face length are the same.</td><td>High Skin Fade, Pompadour with height, Pixie Cut.</td></tr>
+          <tr><td><strong>Long (Oblong)</strong></td><td>Face is tall and narrow.</td><td>Low Taper, Scissor Cuts, Curtain Bangs with side volume.</td></tr>
+          <tr><td><strong>Diamond</strong></td><td>Pointy chin and wide cheekbones.</td><td>Textured Crop, Mullet, Shag Cut, Layered Bob.</td></tr>
         </tbody>
       </table>
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(4)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 5 of 8</span>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 5 of 9</span>
         <button class="nav-btn" onclick="switchLesson(6)">Next: How to do a Taper →</button>
       </div>
     </div>
@@ -793,7 +791,7 @@
     <div class="chapter-card">
       <div class="chapter-header">
         <h2>Lesson 6: Step-by-Step Taper Fade Guide</h2>
-        <span>Lesson 6 of 8</span>
+        <span>Lesson 6 of 9</span>
       </div>
       <p>A <strong>Taper</strong> is different from an all-around fade. A taper only fades down to bare skin at the <strong>sideburns</strong> and the <strong>bottom of the neck</strong>, leaving the hair around the ears dark and full.</p>
 
@@ -809,36 +807,36 @@
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(5)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 6 of 8</span>
-        <button class="nav-btn" onclick="switchLesson(7)">Next: Haircut Lookbook & Steps →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 6 of 9</span>
+        <button class="nav-btn" onclick="switchLesson(7)">Next: Men's Haircut Lookbook →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 7: LOOKBOOK & STEP-BY-STEP ================= -->
+  <!-- ================= LESSON 7: MEN'S LOOKBOOK (12 STYLES) ================= -->
   <div class="lesson-pane" id="lesson-7">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Lesson 7: Haircut Catalog & Step-by-Step Guide</h2>
-        <span>Lesson 7 of 8</span>
+        <h2>Lesson 7: Men's Haircut Catalog (12 Styles & Steps)</h2>
+        <span>Lesson 7 of 9</span>
       </div>
-      <p>Here are the 8 most requested haircuts in the barbershop today. Every card shows a close-up picture of the head and the exact steps to cut it.</p>
+      <p>Here are the 12 most requested men's haircuts. Each card shows a clear head-focused image and the exact steps to cut it.</p>
 
       <div class="catalog-grid">
 
         <!-- 1. LOW SKIN FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Low Fade Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Low Fade">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>1. Low Skin Fade</h4>
-            <p class="haircut-desc">The fade starts very low, right above the ear and down into the neck nape.</p>
+            <p class="haircut-desc">The fade starts very low, right above the ear and drops low across the back nape.</p>
             <div class="step-box">
               <strong>How to Cut It:</strong>
               <ol>
-                <li>Make skin baseline 0.5" above ear using trimmer.</li>
+                <li>Make skin line 0.5" above ear using trimmer.</li>
                 <li>Shave stubble underneath with foil shaver.</li>
                 <li>Blend upward using lever open, then #0.5 guard.</li>
                 <li>Connect to top with #1.5 and #2 guards.</li>
@@ -854,12 +852,12 @@
         <!-- 2. MID SKIN FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?auto=format&fit=crop&w=600&q=80" alt="Mid Fade Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1517832606589-7629c3397143?auto=format&fit=crop&w=600&q=80" alt="Mid Fade">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>2. Mid Skin Fade</h4>
-            <p class="haircut-desc">The most popular cut. Starts 1 inch above the ear across the back bump.</p>
+            <p class="haircut-desc">The balanced shop standard. Starts 1 inch above the ear across the back bump.</p>
             <div class="step-box">
               <strong>How to Cut It:</strong>
               <ol>
@@ -879,12 +877,12 @@
         <!-- 3. HIGH SKIN FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&q=80" alt="High Fade Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&q=80" alt="High Fade">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>3. High Skin Fade</h4>
-            <p class="haircut-desc">Faded very high near the top corners of the head. Very clean and sharp.</p>
+            <p class="haircut-desc">Faded very high near the top corners of the head. High contrast and clean.</p>
             <div class="step-box">
               <strong>How to Cut It:</strong>
               <ol>
@@ -904,8 +902,8 @@
         <!-- 4. LOW TAPER FADE -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Taper Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=600&q=80" alt="Taper Fade">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>4. Clean Low Taper</h4>
@@ -915,7 +913,7 @@
               <ol>
                 <li>Fade sideburns from skin up to #1 guard.</li>
                 <li>Fade bottom neck from skin up to #2 guard.</li>
-                <li>Do not touch or cut the hair behind the ears.</li>
+                <li>Do not cut the hair behind the ears.</li>
                 <li>Make crisp C-cup lines with razor and gel.</li>
               </ol>
             </div>
@@ -929,19 +927,19 @@
         <!-- 5. PRECISION BUZZ CUT -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Buzz Cut Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Buzz Cut">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>5. Military Buzz Cut</h4>
-            <p class="haircut-desc">Short uniform length on top with a skin fade on the sides. No styling needed.</p>
+            <p class="haircut-desc">Short uniform length on top with a skin fade on the sides. Zero daily styling.</p>
             <div class="step-box">
               <strong>How to Cut It:</strong>
               <ol>
                 <li>Cut whole top with #2 or #3 guard against grain.</li>
                 <li>Put a mid or high skin fade on the sides.</li>
                 <li>Make the forehead lineup laser-straight with trimmers.</li>
-                <li>Finish with razor and shaving gel.</li>
+                <li>Finish perimeter with razor and shaving gel.</li>
               </ol>
             </div>
             <table class="spec-table">
@@ -954,8 +952,8 @@
         <!-- 6. MODERN MULLET -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Mullet Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Modern Mullet">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>6. Modern Flow Mullet</h4>
@@ -965,8 +963,8 @@
               <ol>
                 <li>Clip and separate the long back hair.</li>
                 <li>Taper or fade only the sideburns.</li>
-                <li>Trim back hair with scissors, keeping it 3 to 5 inches long.</li>
-                <li>Texture the top so it sweeps naturally.</li>
+                <li>Trim back hair with scissors, keeping it 3–5" long.</li>
+                <li>Texture the top so it sweeps naturally back.</li>
               </ol>
             </div>
             <table class="spec-table">
@@ -979,8 +977,8 @@
         <!-- 7. TEXTURED FRENCH CROP -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="French Crop Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="French Crop">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>7. French Crop</h4>
@@ -1004,19 +1002,19 @@
         <!-- 8. CLASSIC SIDE PART -->
         <div class="haircut-card">
           <div class="haircut-img-wrap">
-            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Side Part Head Close-up">
-            <span class="haircut-tag">Head Close-Up</span>
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Side Part">
+            <span class="haircut-tag">Men's Cut</span>
           </div>
           <div class="haircut-content">
             <h4>8. Classic Side Part</h4>
-            <p class="haircut-desc">Gentleman's haircut parted on one side with clean, tapered edges.</p>
+            <p class="haircut-desc">Gentleman's haircut parted cleanly on one side with tapered edges.</p>
             <div class="step-box">
               <strong>How to Cut It:</strong>
               <ol>
                 <li>Find the natural part line above the eyebrow.</li>
                 <li>Taper the sides using #2 down to #1 guard.</li>
                 <li>Scissor-cut the top, keeping the front fringe longest.</li>
-                <li>Shave a razor part line if requested.</li>
+                <li>Clean part line with straight razor if requested.</li>
               </ol>
             </div>
             <table class="spec-table">
@@ -1026,22 +1024,293 @@
           </div>
         </div>
 
+        <!-- 9. THE BURST FADE -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Burst Fade">
+            <span class="haircut-tag">Men's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>9. The Burst Fade</h4>
+            <p class="haircut-desc">A circular fade curving around the ear, leaving bulk behind the neck.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Make a half-circle bald guideline around the ear.</li>
+                <li>Foil-shave bottom edge right next to ear.</li>
+                <li>Blend outward in a circle using #0.5 and #1 guards.</li>
+                <li>Scissor-blend into the back neck hair.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Curly hair, Athletic look</td></tr>
+              <tr><td>Product:</td><td>Curl Cream / Matte Paste[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 10. THE EDGAR CUT -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80" alt="Edgar Cut">
+            <span class="haircut-tag">Men's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>10. The Edgar Cut</h4>
+            <p class="haircut-desc">Sharp, straight-across blunt bangs on the forehead with high skin-tapered sides.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Execute a high taper or mid drop fade on sides.</li>
+                <li>Comb top and front hair completely flat forward.</li>
+                <li>Cut laser-straight blunt line across the mid-forehead.</li>
+                <li>Use trimmer to sharpen the temple edge.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Oval, Oblong, Street Style</td></tr>
+              <tr><td>Product:</td><td>Matte Styling Powder[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 11. SLICK BACK UNDERCUT -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Slick Back">
+            <span class="haircut-tag">Men's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>11. Slick Back Undercut</h4>
+            <p class="haircut-desc">Top hair is long and combed straight back, disconnected from short buzzed sides.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Section top hair in a horseshoe parting and clip up.</li>
+                <li>Buzz sides and back with #1 or #2 guard straight up.</li>
+                <li>Trim top hair to 4–5" uniform length with shears.</li>
+                <li>Blow-dry straight back using warm heat.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Strong jawline, Square faces</td></tr>
+              <tr><td>Product:</td><td>Medium-Shine Classic Pomade[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 12. THE CREW CUT -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Crew Cut">
+            <span class="haircut-tag">Men's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>12. Modern Crew Cut</h4>
+            <p class="haircut-desc">Classic short haircut graduated from longer in the front fringe to shorter at the crown.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Taper or fade sides from #1 up to #2.5 guard.</li>
+                <li>Cut crown short (0.5") using scissor-over-comb.</li>
+                <li>Gradually leave front fringe longer (1.25" to 1.5").</li>
+                <li>Brush front up and over into a mini pompadour.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Oval, Round, Conservative</td></tr>
+              <tr><td>Product:</td><td>Matte Styling Paste[cite: 2]</td></tr>
+            </table>
+          </div>
+        </div>
+
       </div>
 
       <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(6)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 7 of 8</span>
-        <button class="nav-btn" onclick="switchLesson(8)">Next: Tool Care & Setup →</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 7 of 9</span>
+        <button class="nav-btn" onclick="switchLesson(8)">Next: Women's Haircuts (6 Styles) →</button>
       </div>
     </div>
   </div>
 
-  <!-- ================= LESSON 8: TOOL CARE & SETUP ================= -->
+  <!-- ================= LESSON 8: WOMEN'S LOOKBOOK (6 STYLES) ================= -->
   <div class="lesson-pane" id="lesson-8">
     <div class="chapter-card">
       <div class="chapter-header">
-        <h2>Lesson 8: Tool Care, Zero-Gapping & Station Setup</h2>
-        <span>Lesson 8 of 8</span>
+        <h2>Lesson 8: Women's Haircut Catalog (6 Styles & Steps)</h2>
+        <span>Lesson 8 of 9</span>
+      </div>
+      <p>Modern barbers and stylists frequently service female clients looking for short-to-medium precision cuts. Below are the 6 foundational women's styles.</p>
+
+      <div class="catalog-grid">
+
+        <!-- 1. CLASSIC ONE-LENGTH BOB -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Classic Bob">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>1. Classic French / Jawline Bob</h4>
+            <p class="haircut-desc">A sharp, solid haircut cut blunt along the jawline with zero layers.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Section hair into 4 quadrants (center part + ear-to-ear).</li>
+                <li>Have client tilt chin down slightly.</li>
+                <li>Cut first guideline at the nape at 0° (zero elevation).</li>
+                <li>Drop sections 0.5" at a time and cut flat to the line.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Oval, Heart, Fine hair</td></tr>
+              <tr><td>Product:</td><td>Shine Hair Serum / Argan Oil</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 2. BUTTERFLY LAYERS -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Butterfly Layers">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>2. Long Butterfly Layers</h4>
+            <p class="haircut-desc">Flowing layers that create short bouncy volume on top while keeping length at the bottom.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Separate top crown section from the bottom length.</li>
+                <li>Pull top hair up at 90° and point-cut to remove weight.</li>
+                <li>Over-direct front sections forward to frame the face.</li>
+                <li>Round-brush blow-dry away from face for bounce.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Round, Square, Long hair</td></tr>
+              <tr><td>Product:</td><td>Volumizing Mousse / Heat Spray</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 3. TEXTURED PIXIE CUT -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Pixie Cut">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>3. Textured Pixie Cut</h4>
+            <p class="haircut-desc">Short, feminine cropped cut tapered tightly around the ears and neck with textured top pieceyness.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Taper back neck and around ears using shears or #3 guard.</li>
+                <li>Elevate top sections at 90° using vertical partings.</li>
+                <li>Deep point-cut top hair to create soft feathered tips.</li>
+                <li>Soften sideburn points flat to the cheekbones.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Oval, Heart, Chiseled jaw</td></tr>
+              <tr><td>Product:</td><td>Matte Styling Pomade / Wax</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4. 70S SHAG / CURTAIN BANGS -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="Shag Cut">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>4. Modern Shag & Curtain Bangs</h4>
+            <p class="haircut-desc">Heavily layered haircut featuring cheek-framing curtain bangs parted down the middle.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Section triangular bang area from center part to temple.</li>
+                <li>Twist bang section once in center and slide-cut at 45°.</li>
+                <li>Slide-cut side layers downward to connect into bangs.</li>
+                <li>Diffuse or blow-dry with round brush curling outward.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Oblong, Oval, Wavy hair</td></tr>
+              <tr><td>Product:</td><td>Sea Salt Spray / Texture Mist</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 5. A-LINE LOB (LONG BOB) -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="A-Line Lob">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>5. A-Line Graduated Lob</h4>
+            <p class="haircut-desc">Collarbone-length bob that is shorter in the back and gently angles longer toward the front.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Establish baseline at the nape sitting above shoulders.</li>
+                <li>Cut diagonal-forward partings from back to front.</li>
+                <li>Over-direct front sections backward slightly to retain length.</li>
+                <li>Flat iron smooth with slight inward bevel.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>Round, Square faces (Slims neck)</td></tr>
+              <tr><td>Product:</td><td>Heat Protectant & Anti-Frizz Oil</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 6. BLUNT COLLARBONE CUT -->
+        <div class="haircut-card">
+          <div class="haircut-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Blunt Cut">
+            <span class="haircut-tag" style="border-color:#ec4899; color:#f472b6;">Women's Cut</span>
+          </div>
+          <div class="haircut-content">
+            <h4>6. Blunt Collarbone Cut</h4>
+            <p class="haircut-desc">Crisp, clean medium-length haircut sitting flat right at the collarbone with dense, thick ends.</p>
+            <div class="step-box">
+              <strong>How to Cut It:</strong>
+              <ol>
+                <li>Comb damp hair flat with zero elevation (0°).</li>
+                <li>Cut straight horizontal line using comb spine as ruler.</li>
+                <li>Have client look straight ahead with shoulders relaxed.</li>
+                <li>Point-cut vertical snips into ends to relieve tension.</li>
+              </ol>
+            </div>
+            <table class="spec-table">
+              <tr><td>Best For:</td><td>All face shapes, Thick or fine hair</td></tr>
+              <tr><td>Product:</td><td>Lightweight Styling Serum</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lesson-nav-footer no-print">
+        <button class="nav-btn" onclick="switchLesson(7)">← Previous Lesson</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 8 of 9</span>
+        <button class="nav-btn" onclick="switchLesson(9)">Next: Tool Care & Setup →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= LESSON 9: TOOL CARE & SETUP ================= -->
+  <div class="lesson-pane" id="lesson-9">
+    <div class="chapter-card">
+      <div class="chapter-header">
+        <h2>Lesson 9: Tool Care, Zero-Gapping & Station Setup</h2>
+        <span>Lesson 9 of 9</span>
       </div>
 
       <h3>How to Oil Your Clippers (The 3-Drop Rule):</h3>
@@ -1061,8 +1330,8 @@
       </div>
 
       <div class="lesson-nav-footer no-print">
-        <button class="nav-btn" onclick="switchLesson(7)">← Previous Lesson</button>
-        <span style="color:var(--text-muted); font-size:8pt;">Lesson 8 of 8</span>
+        <button class="nav-btn" onclick="switchLesson(8)">← Previous Lesson</button>
+        <span style="color:var(--text-muted); font-size:8pt;">Lesson 9 of 9</span>
         <button class="nav-btn" onclick="switchLesson(1)">Back to Start (Lesson 1) ↺</button>
       </div>
     </div>
