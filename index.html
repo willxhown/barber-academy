@@ -16,11 +16,6 @@
     --danger: #ef4444;
   }
 
-  @page {
-    size: A4 portrait;
-    margin: 12mm;
-  }
-
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -224,7 +219,7 @@
     line-height: 1.35;
   }
 
-  /* Haircut Catalog Grid (Head-Focused AI Images) */
+  /* Haircut Catalog Grid */
   .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -373,6 +368,15 @@
     border-radius: 0 6px 6px 0;
   }
 
+  .svg-container {
+    background: #10131a;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 14px;
+    margin: 14px 0;
+    text-align: center;
+  }
+
   /* Bottom Next/Back */
   .lesson-nav-footer {
     display: flex;
@@ -405,15 +409,145 @@
     cursor: not-allowed;
   }
 
+  /* ================= PRINT & PDF OPTIMIZATION ================= */
   @media print {
-    body { background: #fff; color: #000; padding: 0; }
-    .lesson-pane { display: block !important; page-break-after: always; }
-    .tab-nav, .lesson-nav-footer, .no-print { display: none !important; }
-    .chapter-card, .haircut-card, .tool-card { background: #fff; color: #000; border: 1px solid #ccc; }
-    .hero-banner { background: #fff; border: 2px solid #000; color: #000; }
-    .hero-title, h3, h4, .chapter-header h2 { color: #000 !important; }
-    p, li, td { color: #222 !important; }
-    table.data-table th { background: #eee; color: #000; }
+    @page {
+      size: A4 portrait;
+      margin: 12mm;
+    }
+
+    body {
+      background-color: #ffffff !important;
+      color: #111827 !important;
+      font-size: 9pt;
+      line-height: 1.45;
+      padding: 0;
+    }
+
+    .manual-wrapper {
+      max-width: 100% !important;
+      margin: 0 !important;
+    }
+
+    /* 1. Unhide ALL lessons so complete manual prints */
+    .lesson-pane {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      page-break-before: always;
+      break-before: page;
+      margin-top: 0;
+    }
+
+    .lesson-pane#lesson-1 {
+      page-break-before: avoid;
+      break-before: avoid;
+    }
+
+    /* 2. Hide interactive browser elements */
+    .tab-nav, 
+    .lesson-nav-footer, 
+    .no-print {
+      display: none !important;
+    }
+
+    /* 3. Colors and Card Borders */
+    .hero-banner {
+      background: #ffffff !important;
+      border: 2px solid #000000 !important;
+      color: #000000 !important;
+      padding: 14px !important;
+      margin-bottom: 16px !important;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    .hero-title, h3, h4, .chapter-header h2 {
+      color: #000000 !important;
+    }
+
+    .hero-sub, p, li, td {
+      color: #1f2937 !important;
+    }
+
+    .chapter-card {
+      background: #ffffff !important;
+      border: 1px solid #d1d5db !important;
+      box-shadow: none !important;
+      padding: 14px !important;
+      margin-bottom: 16px !important;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+
+    .chapter-header {
+      border-bottom: 2px solid #000000 !important;
+    }
+
+    /* 4. Prevent item splits across page breaks */
+    .tool-card,
+    .haircut-card,
+    .callout-box,
+    .svg-container,
+    tr {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .tool-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 10px !important;
+    }
+
+    .catalog-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+    }
+
+    .tool-card, .haircut-card {
+      background: #ffffff !important;
+      border: 1px solid #cbd5e1 !important;
+    }
+
+    .haircut-img-wrap {
+      height: 180px !important;
+    }
+
+    .haircut-tag {
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: 1px solid #000000 !important;
+    }
+
+    .step-box {
+      background: #f8fafc !important;
+      border-left: 3px solid #000000 !important;
+    }
+
+    .step-box strong, .tool-info strong {
+      color: #000000 !important;
+    }
+
+    table.data-table th {
+      background: #f1f5f9 !important;
+      color: #000000 !important;
+      border-bottom: 1px solid #94a3b8 !important;
+    }
+
+    table.data-table td, .spec-table td {
+      border-bottom: 1px solid #e2e8f0 !important;
+      color: #1e293b !important;
+    }
+
+    .callout-box {
+      background: #f8fafc !important;
+      border-left: 3px solid #000000 !important;
+    }
+
+    .svg-container {
+      background: #ffffff !important;
+      border: 1px solid #cbd5e1 !important;
+    }
   }
 </style>
 </head>
@@ -520,7 +654,7 @@
         </tbody>
       </table>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" disabled>← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 1 of 8</span>
         <button class="nav-btn" onclick="switchLesson(2)">Next: Cleanliness & Safety →</button>
@@ -549,7 +683,7 @@
         <p style="margin:4px 0 0; font-size:8.5pt;">If a client has open sores, bleeding pimples, or circular red itchy patches (ringworm), politely tell them they need to visit a doctor first before getting a haircut.</p>
       </div>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(1)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 2 of 8</span>
         <button class="nav-btn" onclick="switchLesson(3)">Next: Parts of the Head →</button>
@@ -586,7 +720,7 @@
         </svg>
       </div>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(2)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 3 of 8</span>
         <button class="nav-btn" onclick="switchLesson(4)">Next: Washing & Drying →</button>
@@ -616,7 +750,7 @@
         <li><strong>Use the Cold Button:</strong> Blast the styled hair with cold air for 5 seconds to lock the shape in place.</li>
       </ol>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(3)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 4 of 8</span>
         <button class="nav-btn" onclick="switchLesson(5)">Next: Face Shapes Guide →</button>
@@ -646,7 +780,7 @@
         </tbody>
       </table>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(4)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 5 of 8</span>
         <button class="nav-btn" onclick="switchLesson(6)">Next: How to do a Taper →</button>
@@ -673,7 +807,7 @@
         <li><strong>Step 6 (Edge-up):</strong> Use the corner of your trimmer to make the curved temple line (C-cup) crisp and sharp.</li>
       </ol>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(5)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 6 of 8</span>
         <button class="nav-btn" onclick="switchLesson(7)">Next: Haircut Lookbook & Steps →</button>
@@ -681,7 +815,7 @@
     </div>
   </div>
 
-  <!-- ================= LESSON 7: LOOKBOOK & STEP-BY-STEP (HEAD-FOCUSED AI IMAGES) ================= -->
+  <!-- ================= LESSON 7: LOOKBOOK & STEP-BY-STEP ================= -->
   <div class="lesson-pane" id="lesson-7">
     <div class="chapter-card">
       <div class="chapter-header">
@@ -894,7 +1028,7 @@
 
       </div>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(6)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 7 of 8</span>
         <button class="nav-btn" onclick="switchLesson(8)">Next: Tool Care & Setup →</button>
@@ -926,7 +1060,7 @@
         <p style="margin:4px 0 0; font-size:8.5pt;">Clean cape ready • White neck strip loaded • Blue Barbicide jar filled • Sharp razor blade ready in shavette • Clippers oiled and charged.</p>
       </div>
 
-      <div class="lesson-nav-footer">
+      <div class="lesson-nav-footer no-print">
         <button class="nav-btn" onclick="switchLesson(7)">← Previous Lesson</button>
         <span style="color:var(--text-muted); font-size:8pt;">Lesson 8 of 8</span>
         <button class="nav-btn" onclick="switchLesson(1)">Back to Start (Lesson 1) ↺</button>
@@ -939,27 +1073,22 @@
 <!-- TAB SWITCHING ENGINE -->
 <script>
   function switchLesson(lessonNum) {
-    // 1. Hide all lesson panes
     const panes = document.querySelectorAll('.lesson-pane');
     panes.forEach(pane => pane.classList.remove('active'));
 
-    // 2. Un-highlight tab buttons
     const buttons = document.querySelectorAll('.tab-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // 3. Show selected lesson
     const target = document.getElementById('lesson-' + lessonNum);
     if (target) {
       target.classList.add('active');
     }
 
-    // 4. Highlight active button
     if (buttons[lessonNum - 1]) {
       buttons[lessonNum - 1].classList.add('active');
       buttons[lessonNum - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     }
 
-    // 5. Scroll smoothly to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
